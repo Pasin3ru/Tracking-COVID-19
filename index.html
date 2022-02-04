@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>COVID-19 Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,600&display=swap" rel="stylesheet"> 
+    <link rel="style-sheet" href="https://stackpath.bootstrapcdn.com/font-
+    awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src=""</a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">GLOBAL</a></li>
+                <li><a href="">U.S.</a></li>
+                <li><a href="">N.Y STATE</a></li>
+                <li><a href="">COUNTY</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<div class="text-box">
+    <h1>Tracking The COVID-19 Outbreak</h1>
+    <p>This Website Will Soon Show Live Virus Data!<br>Track The Virus From 2020 - 2022
+    </p>
+    <a href="" class="hero-btn">Click To Know More</a>
+</section>
+
+<!-- Info -->
+<section class="info">
+    <h1>COVID-19 Data Available</h1>
+    <p>Global | United States | New York State | New York State by County</p>
+    <div class="row">
+        <div class="info-column">
+            <h3>Global</h3>
+            <p>Live Data Coming Soon!</p>
+        </div>
+        <div class="info-column">
+            <h3>United States</h3>
+            <p>Live Data Coming Soon!</p>
+        </div>
+        <div class="info-column">
+            <h3>New York State</h3>
+            <p>Live Data Coming Soon!</p>
+        </div>
+        <div class="info-column">
+            <h3>County </h3>
+            <p>Live Data Coming Soon!</p>
+        </div>
+    </div>
+</section>
+
+<!--- Hospital -->
+<section class="hospital">
+    <h1>Local COVID-19 Hospital Admissions</h1>
+    <p>Live Data Coming Soon!</p>
+
+    <div class="row">
+        <div class="hospital-column">
+            <img src="images/gfh2.jpg">
+            <div class="layer">
+                <h3>Glens Falls Hospital</h3>
+            </div>
+        </div>
+        <div class="hospital-column">
+            <img src="images/sh2.jpg">
+            <div class="layer">
+                <h3>Saratoga Hospital</h3>
+            </div>
+        </div>
+</section>
+
+<!--- Footer -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Coming Soon</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+    </div>
+</section>
+
+
+<!--- JavaScript for Toggle Menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+
+</html>
