@@ -304,7 +304,7 @@ tr:hover {
     width: 100%;
 }
 
-.ny_state_data td th:first-child {
+.ny_state_data th td:first-child {
     display: none;
 }
 
