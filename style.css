@@ -195,10 +195,11 @@ h3 {
 
 .global_data {
     width: 90%;
-    margin: 20px;
+    margin: auto;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 10px;
 }
 
 
