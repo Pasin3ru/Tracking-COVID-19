@@ -201,7 +201,8 @@ tr:nth-child(even) {
 /*----- Highlighting on Hover ------*/
 
 tr:hover {
-    background-color: #ffff99;
+    background-color: #141fbb;
+    font-weight: 200;
 }
 
 
