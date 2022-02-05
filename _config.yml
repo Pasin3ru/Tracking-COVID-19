@@ -1,0 +1,22 @@
+# Plugin settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+timezone: 'America/New_York'
+
+# Files to exclude
+exclude:
+  - .tags
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bin
+
+# Sass setup
+sass:
+  sass_dir: stylesheets
+  style: compressed

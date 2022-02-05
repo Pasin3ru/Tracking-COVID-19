@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 
 <html>
@@ -7,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -39,7 +41,7 @@
     </ul>
     </p>
     <a href="" class="hero-btn" onClick="window.open('index2.html');">Click To Learn More<br>About COVID-19</a>
-    
+
 </div>
 </section>
 
@@ -83,55 +85,8 @@
             </div>
 
             <!-- This Adds The DataFrame -->
-            <table border="1" class="dataframe">
-                <thead>
-                  <tr style="text-align: center;">
-                    <th style="min-width: 60px;">Date</th>
-                    <th style="min-width: 60px;">Patients Currently</th>
-                    <th style="min-width: 60px;">Patients Admitted</th>
-                    <th style="min-width: 60px;">Patients In ICU</th>
-                    <th style="min-width: 60px;">Patients Expired</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Feb 3</td>
-                    <td>34</td>
-                    <td>2</td>
-                    <td>4</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>Feb 2</td>
-                    <td>39</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>Feb 1</td>
-                    <td>39</td>
-                    <td>4</td>
-                    <td>6</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Jan 31</td>
-                    <td>42</td>
-                    <td>3</td>
-                    <td>7</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>Jan 30</td>
-                    <td>41</td>
-                    <td>6</td>
-                    <td>6</td>
-                    <td>0</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- DataFrame Ends Here -->
+            {% include hospital-tables/s_hospital.html %}
+            <!-- DataFrame Ends Here -->
 
         </div>
         <div class="hospital-column">
