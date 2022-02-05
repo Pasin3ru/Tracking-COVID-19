@@ -294,8 +294,8 @@ th {
     width: 100%;
 }
 
-.ny_state_data td:first-child {
-    display: none;
+.ny_state_data th:first-child {
+    display: h;
 }
 
 
