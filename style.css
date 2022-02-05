@@ -298,7 +298,7 @@ th {
     display: none;
 }
 
-table td:nth-child(0) {
+table td:nth-child(1) {
     display: none;
 }
 
