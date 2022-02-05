@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,600&display=swap" rel="stylesheet"> 
-    <link rel="style-sheet" href="https://stackpath.bootstrapcdn.com/font-
-    awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <section class="header">
@@ -18,27 +17,36 @@
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="">HOME</a></li>
+                <li><a href="" class="btn" onClick="window.open('index1.html');">HOME</a></li>
                 <li><a href="">GLOBAL</a></li>
                 <li><a href="">U.S.</a></li>
                 <li><a href="">N.Y STATE</a></li>
                 <li><a href="">COUNTY</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="" class="btn" onClick="window.open('gf_hospital.html');">GLENS FALLS</a></li>
+                <li><a href="" class="btn" onClick="window.open('s_hospital.html');">SARATOGA</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
 <div class="text-box">
     <h1>Tracking The COVID-19 Outbreak</h1>
-    <p>This Website Will Soon Show Live Virus Data!<br>Track The Virus From 2020 - 2022
+    <p>The First Reported COVID-19 Case In The US Was Reported On<br>January 19, 2020 in Snohomish County, Washington
+    <h4>Project Start Date - March 15,  2020</h4>
+    <ul> </ul>
+    <ul>
+        <br>Presume That You Are Being Exposed To COVID-19 When Going Into Public<br>
+        Take Precautions Such As The Use Of A Mask OR Face Covering Accordingly
+    </ul>
     </p>
-    <a href="" class="hero-btn">Click To Know More</a>
+    <a href="" class="hero-btn" onClick="window.open('index2.html');">Click To Learn More<br>About COVID-19</a>
+    
+</div>
 </section>
 
 <!-- Info -->
 <section class="info">
     <h1>COVID-19 Data Available</h1>
-    <p>Global | United States | New York State | New York State by County</p>
+    <p>Global | United States | New York State | New York State by County | Local Hospitals </p>
     <div class="row">
         <div class="info-column">
             <h3>Global</h3>
@@ -56,36 +64,148 @@
             <h3>County </h3>
             <p>Live Data Coming Soon!</p>
         </div>
+        <div class="info-column">
+            <h3>Hospitals</h3>
+            <p>Live Data Coming Soon!</p>
+        </div>
     </div>
 </section>
 
 <!--- Hospital -->
 <section class="hospital">
-    <h1>Local COVID-19 Hospital Admissions</h1>
+    <h1>Local COVID-19 Hospital Information</h1>
     <p>Live Data Coming Soon!</p>
-
     <div class="row">
         <div class="hospital-column">
             <img src="images/gfh2.jpg">
             <div class="layer">
                 <h3>Glens Falls Hospital</h3>
             </div>
+
+            <!-- This Adds The DataFrame -->
+            <table border="1" class="dataframe">
+                <thead>
+                  <tr style="text-align: center;">
+                    <th style="min-width: 60px;">Date</th>
+                    <th style="min-width: 60px;">Patients Currently</th>
+                    <th style="min-width: 60px;">Patients Admitted</th>
+                    <th style="min-width: 60px;">Patients In ICU</th>
+                    <th style="min-width: 60px;">Patients Expired</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Feb 3</td>
+                    <td>34</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Feb 2</td>
+                    <td>39</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Feb 1</td>
+                    <td>39</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Jan 31</td>
+                    <td>42</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Jan 30</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- DataFrame Ends Here -->
+
         </div>
         <div class="hospital-column">
             <img src="images/sh2.jpg">
             <div class="layer">
                 <h3>Saratoga Hospital</h3>
             </div>
+
+            <!-- This Adds The DataFrame -->
+            <table border="1" class="dataframe">
+                <thead>
+                  <tr style="text-align: center;">
+                    <th style="min-width: 60px;">Date</th>
+                    <th style="min-width: 60px;">Patients Currently</th>
+                    <th style="min-width: 60px;">Patients Admitted</th>
+                    <th style="min-width: 60px;">Patients In ICU</th>
+                    <th style="min-width: 60px;">Patients Expired</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Feb 3</td>
+                    <td>27</td>
+                    <td>2</td>
+                    <td>7</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Feb 2</td>
+                    <td>32</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Feb 1</td>
+                    <td>35</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Jan 31</td>
+                    <td>40</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Jan 30</td>
+                    <td>41</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>2</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- DataFrame Ends Here -->
+
         </div>
 </section>
 
 <!--- Footer -->
 <section class="footer">
     <h4>About Us</h4>
-    <p>Coming Soon</p>
+    <ul>Created by RKP</ul>
+    <ul>New York State Data Source: https://data.ny.gov</ul>
+    <ul>Global Data Source: https://www.worldometers.info/coronavirus</ul>
     <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-twitter-square"></i>
+        <i class="fa fa-github-square"></i>
+        <i class="fa fa-youtube-square"></i>
+        <i class="fa fa-bar-chart"></i>
     </div>
 </section>
 

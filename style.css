@@ -80,7 +80,7 @@ nav img {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
+    border: .5px solid #fff;
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
@@ -138,6 +138,13 @@ nav .fa {
     padding-top: 50px;
 }
 
+.info2 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2000px;
+}
+
 h1 {
     font-size: 36px;
     font-weight: 600;
@@ -187,10 +194,11 @@ h3 {
 /*----- hospital Admisions ------*/
 
 .hospital {
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .hospital-column {
@@ -206,6 +214,16 @@ h3 {
     display: block;
 }
 
+.dataframe {
+    width: 40%;
+    margin: auto;
+    padding-top: 50px;
+    image-rendering: auto;
+    resize: both;
+    overflow: visible;
+    border: none;
+}
+
 .layer {
     background: transparent;
     height: 100%;
@@ -217,14 +235,14 @@ h3 {
 }
 
 .layer:hover {
-    background: #f5f1f1b3;
+    background: #cbc9c9b3;
 }
 
 .layer h3 {
     width: 100%;
     font-weight: 500;
     color: 'black';
-    font-size: 26px;
+    font-size: 32px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -248,7 +266,7 @@ h3 {
 }
 
 .footer h4 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     margin-top: 20px;
     font-weight: 600;
 }
