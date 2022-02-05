@@ -207,7 +207,7 @@ tr:hover {
 }
 
 
-/*----- Global Data ------*/
+/*----- Global Table Data ------*/
 
 .global_data {
     width: 90%;
@@ -218,7 +218,7 @@ tr:hover {
 }
 
 
-/*----- US Data ------*/
+/*----- US Table Data ------*/
 
 .us_data {
     width: 90%;
@@ -228,8 +228,13 @@ tr:hover {
     padding-bottom: 50px;
 }
 
+.us_data {
+    overflow: scroll;
+    height: 100px;
+}
 
-/*----- Hospital Admissions ------*/
+
+/*----- Local Hospital  ------*/
 
 .hospital {
     width: 90%;
