@@ -209,7 +209,7 @@ tr:hover {
 
 /*----- Freezes Header Column in Tables ------*/
 
-th {
+.global_data th {
     background: white;
     backface-visibility: 0;
     position: sticky;
@@ -257,6 +257,13 @@ th {
     margin: auto;
     text-align: center;
     padding-bottom: 50px;
+}
+
+.us_data th {
+    background: white;
+    backface-visibility: 0;
+    position: sticky;
+    top: 0;
 }
 
 
