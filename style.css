@@ -207,7 +207,23 @@ tr:hover {
 }
 
 
+/*----- Freezes Header Column in Tables ------*/
+
+th {
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+
 /*----- Global Table Data ------*/
+
+.global_data_title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
 
 .global_data {
     width: 90%;
@@ -223,19 +239,6 @@ tr:hover {
     overflow: scroll;
     height: 350px;
     width: 100%;
-}
-
-th {
-    background: white;
-    position: sticky;
-    top: 0;
-}
-
-.global_data_title {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
 }
 
 
