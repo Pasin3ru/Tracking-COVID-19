@@ -298,6 +298,10 @@ th {
     display: none;
 }
 
+table td:nth-child(0) {
+    display: none;
+}
+
 
 /*----- Local Hospital  ------*/
 
