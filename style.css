@@ -202,7 +202,7 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #141fbb;
-    font-weight: 200;
+    font-weight: 400;
     color: white;
 }
 
