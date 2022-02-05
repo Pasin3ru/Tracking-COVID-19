@@ -294,7 +294,7 @@ th {
     width: 100%;
 }
 
-.ny_state_data thead tr td:first-child {
+.ny_state_data table td.first {
     display: none;
 }
 
