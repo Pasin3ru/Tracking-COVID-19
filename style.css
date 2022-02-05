@@ -225,6 +225,10 @@ tr:hover {
     width: 100%;
 }
 
+table thead {
+    position: fixed;
+}
+
 .global_data_title {
     width: 90%;
     margin: auto;
