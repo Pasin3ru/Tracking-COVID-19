@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>As of Date</th>
+      <th>Facility PFI</th>
+      <th>Facility Name</th>
+      <th>DOH Region</th>
+      <th>Facility County</th>
+      <th>Facility Network</th>
+      <th>NY Forward Region</th>
+      <th>Patients Currently Hospitalized</th>
+      <th>Patients Newly Admitted</th>
+      <th>Patients Positive After Admission</th>
+      <th>Patients Discharged</th>
+      <th>Patients Currently in ICU</th>
+      <th>Patients Currently ICU Intubated</th>
+      <th>Patients Expired</th>
+      <th>Cumulative COVID-19 Discharges to Date</th>
+      <th>Cumulative COVID-19 Fatalities to Date</th>
+      <th>Total Staffed Beds</th>
+      <th>Total Staffed Beds Currently Available</th>
+      <th>Total Staffed ICU Beds</th>
+      <th>Total Staffed ICU Beds Currently Available</th>
+      <th>Total Staffed Acute Care Beds</th>
+      <th>Total Staffed Acute Care Beds Occupied</th>
+      <th>Total Staffed ICU Beds 1</th>
+      <th>Total Staffed ICU Beds Currently Occupied</th>
+      <th>Total New Admissions Reported</th>
+      <th>Patients Age Less Than 1 Year</th>
+      <th>Patients Age 1 To 4 Years</th>
+      <th>Patients Age 5 to 19 Years</th>
+      <th>Patients Age 20 to 44 Years</th>
+      <th>Patients Age 45 to 54 Years</th>
+      <th>Patients Age 55 to 64 Years</th>
+      <th>Patients Age 65 to 74 Years</th>
+      <th>Patients Age 75 to 84 Years</th>
+      <th>Patients Age Greater Than 85 Years</th>
+      <th>Hospitalized Indicator</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in site.data.ny %}
+      {% assign rows = d[1] %}
+      {% for row in rows %}
+        <tr>
+          <td>{{ row["As of Date"] }}</td>
+          <td>{{ row["Facility PFI"] }}</td>
+          <td>{{ row["Facility Name"] }}</td>
+          <td>{{ row["DOH Region"] }}</td>
+          <td>{{ row["Facility County"] }}</td>
+          <td>{{ row["Facility Network"] }}</td>
+          <td>{{ row["NY Forward Region"] }}</td>
+          <td>{{ row["Patients Currently Hospitalized"] }}</td>
+          <td>{{ row["Patients Newly Admitted"] }}</td>
+          <td>{{ row["Patients Positive After Admission"] }}</td>
+          <td>{{ row["Patients Discharged"] }}</td>
+          <td>{{ row["Patients Currently in ICU"] }}</td>
+          <td>{{ row["Patients Currently ICU Intubated"] }}</td>
+          <td>{{ row["Patients Expired"] }}</td>
+          <td>{{ row["Cumulative COVID-19 Discharges to Date"] }}</td>
+          <td>{{ row["Cumulative COVID-19 Fatalities to Date"] }}</td>
+          <td>{{ row["Total Staffed Beds"] }}</td>
+          <td>{{ row["Total Staffed Beds Currently Available"] }}</td>
+          <td>{{ row["Total Staffed ICU Beds"] }}</td>
+          <td>{{ row["Total Staffed ICU Beds Currently Available"] }}</td>
+          <td>{{ row["Total Staffed Acute Care Beds"] }}</td>
+          <td>{{ row["Total Staffed Acute Care Beds Occupied"] }}</td>
+          <td>{{ row["Total Staffed ICU Beds 1"] }}</td>
+          <td>{{ row["Total Staffed ICU Beds Currently Occupied"] }}</td>
+          <td>{{ row["Total New Admissions Reported"] }}</td>
+          <td>{{ row["Patients Age Less Than 1 Year"] }}</td>
+          <td>{{ row["Patients Age 1 To 4 Years"] }}</td>
+          <td>{{ row["Patients Age 5 to 19 Years"] }}</td>
+          <td>{{ row["Patients Age 20 to 44 Years"] }}</td>
+          <td>{{ row["Patients Age 45 to 54 Years"] }}</td>
+          <td>{{ row["Patients Age 55 to 64 Years"] }}</td>
+          <td>{{ row["Patients Age 65 to 74 Years"] }}</td>
+          <td>{{ row["Patients Age 75 to 84 Years"] }}</td>
+          <td>{{ row["Patients Age Greater Than 85 Years"] }}</td>
+          <td>{{ row["Hospitalized Indicator"] }}</td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
