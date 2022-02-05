@@ -220,6 +220,14 @@ tr:hover {
 
 /*----- US Table Data ------*/
 
+.us_data_title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .us_data {
     width: 90%;
     margin: auto;
