@@ -295,7 +295,7 @@ th {
 }
 
 .ny_state_data th:first-child {
-    display: h;
+    display: none;
 }
 
 
