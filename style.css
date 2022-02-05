@@ -294,6 +294,10 @@ th {
     width: 100%;
 }
 
+.ny_state_data.table.tbl tr td:first-child {
+    display: none;
+}
+
 
 /*----- Local Hospital  ------*/
 
