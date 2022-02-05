@@ -190,8 +190,18 @@ h3 {
     }
 }
 
+
+/*----- Zebra Striped Table ------*/
+
 tr:nth-child(even) {
     background-color: #f2f2f2
+}
+
+
+/*----- Highlighting on Hover ------*/
+
+tr:hover {
+    background-color: #ffff99;
 }
 
 
