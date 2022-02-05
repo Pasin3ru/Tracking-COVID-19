@@ -191,7 +191,18 @@ h3 {
 }
 
 
-/*----- hospital Admisions ------*/
+/*----- Global Data ------*/
+
+.global_data {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/*----- Hospital Admissions ------*/
 
 .hospital {
     width: 90%;
