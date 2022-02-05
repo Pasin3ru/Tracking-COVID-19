@@ -265,6 +265,16 @@ th {
 }
 
 
+/*----- NY State Table Data ------*/
+
+.ny_sate_data_title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+
 /*----- Local Hospital  ------*/
 
 .hospital {
