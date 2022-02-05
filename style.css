@@ -218,6 +218,22 @@ tr:hover {
 }
 
 
+/*----- Global Table Scrol Bar  ------*/
+
+.us_data {
+    overflow: scroll;
+    height: 350px;
+    width: 100%;
+}
+
+.global_data_title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
 /*----- US Table Data ------*/
 
 .us_data_title {
@@ -235,7 +251,7 @@ tr:hover {
 }
 
 
-/*----- Scrol Bar  ------*/
+/*----- US Table Scrol Bar  ------*/
 
 .us_data {
     overflow: scroll;
