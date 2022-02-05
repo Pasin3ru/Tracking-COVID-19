@@ -1,49 +1,6 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>COVID-19 Data</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<section class="header">
-    <nav>
-        <a href="index.html"><img src=""</a>
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="" class="btn" onClick="window.open('index1.html');">HOME</a></li>
-                <li><a href="">GLOBAL</a></li>
-                <li><a href="">U.S.</a></li>
-                <li><a href="">N.Y STATE</a></li>
-                <li><a href="">COUNTY</a></li>
-                <li><a href="" class="btn" onClick="window.open('gf_hospital.html');">GLENS FALLS</a></li>
-                <li><a href="" class="btn" onClick="window.open('s_hospital.html');">SARATOGA</a></li>
-            </ul>
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-<div class="text-box">
-    <h1>Tracking The COVID-19 Outbreak</h1>
-    <p>The First Reported COVID-19 Case In The US Was Reported On<br>January 19, 2020 in Snohomish County, Washington
-    <h4>Project Start Date - March 15,  2020</h4>
-    <ul> </ul>
-    <ul>
-        <br>Presume That You Are Being Exposed To COVID-19 When Going Into Public<br>
-        Take Precautions Such As The Use Of A Mask OR Face Covering Accordingly
-    </ul>
-    </p>
-    <a href="" class="hero-btn" onClick="window.open('index2.html');">Click To Learn More<br>About COVID-19</a>
-
-</div>
-</section>
 
 <!-- Info -->
 <section class="info">
@@ -101,34 +58,3 @@
 
         </div>
 </section>
-
-<!--- Footer -->
-<section class="footer">
-    <h4>About Us</h4>
-    <ul>Created by RKP</ul>
-    <ul>New York State Data Source: https://data.ny.gov</ul>
-    <ul>Global Data Source: https://www.worldometers.info/coronavirus</ul>
-    <div class="icons">
-        <i class="fa fa-facebook-official"></i>
-        <i class="fa fa-twitter-square"></i>
-        <i class="fa fa-github-square"></i>
-        <i class="fa fa-youtube-square"></i>
-        <i class="fa fa-bar-chart"></i>
-    </div>
-</section>
-
-
-<!--- JavaScript for Toggle Menu -->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-</script>
-
-</body>
-
-</html>
