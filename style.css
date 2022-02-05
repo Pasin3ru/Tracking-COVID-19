@@ -277,6 +277,22 @@ th {
     padding-top: 80px;
 }
 
+.ny_state_data {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+/*----- NY State Table Scrol Bar  ------*/
+
+.ny_state_data {
+    overflow: scroll;
+    height: 350px;
+    width: 100%;
+}
+
 
 /*----- Local Hospital  ------*/
 
