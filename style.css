@@ -198,7 +198,7 @@ tr:nth-child(even) {
 }
 
 
-/*----- Highlighting on Hover ------*/
+/*----- Highlighting Table Rows on Hover ------*/
 
 tr:hover {
     background-color: #141fbb;
