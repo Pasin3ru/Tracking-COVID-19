@@ -210,7 +210,7 @@ tr:hover {
 /*----- Freezes Header Column in Tables ------*/
 
 th {
-    background-color: white;
+    background: white;
     position: sticky;
     top: 0;
 }
