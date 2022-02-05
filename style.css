@@ -234,9 +234,12 @@ tr:hover {
     padding-bottom: 50px;
 }
 
+
+/*----- Scrol Bar  ------*/
+
 .us_data {
     overflow: scroll;
-    height: 300px;
+    height: 310px;
     width: 100%;
 }
 
