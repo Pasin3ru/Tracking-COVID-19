@@ -228,7 +228,7 @@ tr:hover {
     padding-bottom: 50px;
 }
 
-.us_data td {
+.us_data tbody {
     overflow: scroll;
     height: 100px;
     width: 100%;
