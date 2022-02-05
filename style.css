@@ -220,7 +220,7 @@ tr:hover {
 
 /*----- Global Table Scrol Bar  ------*/
 
-.us_data {
+.global_data {
     overflow: scroll;
     height: 350px;
     width: 100%;
