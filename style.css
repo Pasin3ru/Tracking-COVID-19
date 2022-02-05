@@ -211,6 +211,7 @@ tr:hover {
 
 th {
     background: white;
+    backface-visibility: 0;
     position: sticky;
     top: 0;
 }
