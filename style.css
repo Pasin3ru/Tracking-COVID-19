@@ -313,6 +313,14 @@ tr:hover {
 }
 
 
+/*----- Hides Date Column ------*/
+
+.ny_state_data .dataframe td:first-child,
+.dataframe th:first-child {
+    display: none;
+}
+
+
 /*----- NY State Table Scrol Bar  ------*/
 
 .ny_state_data {
