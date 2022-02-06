@@ -10,11 +10,11 @@ layout: default
   <p>Presume That You Are Being Exposed To COVID-19 When Going Into Public<br>
     Take Precautions Such As The Use Of A Mask OR Face Covering Accordingly</p>
   <p><a href="learn-more.html" class="hero-btn">Click To Learn More<br>About COVID-19</a></p>
+  <ul class="date_time">Last Update: <span id="datetime"></span></ul><script>var dt = new Date();
+    document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>  
+  
 </div>
 
-  <p>
-    <input type='date' id='hasta' value='<?php echo date('Y-m-d');?>'>
-  </p>
     
 
 {{ content }}
