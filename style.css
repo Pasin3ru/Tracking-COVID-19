@@ -252,6 +252,11 @@ tr:hover {
     padding-top: 80px;
 }
 
+.ny_state_data .dataframe td:first-child,
+.dataframe th:first-child {
+    display: none;
+}
+
 .us_data {
     width: 90%;
     margin: auto;
