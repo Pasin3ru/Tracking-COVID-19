@@ -1,7 +1,4 @@
----
-layout: page
-permalink: /learn-more.html
----
+
 
 ## Overview
 
