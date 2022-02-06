@@ -32,10 +32,10 @@ layout: home
 
 <!--- Global Data -->
 <ul class="global_data_title">
-    <h1>Global COVID-19 Information</h1>
+    <h1 id="global_dataframe">Global COVID-19 Information</h1>
     
 </ul>
-<section class="global_data" id="global_dataframe">
+<section class="global_data">
     <!-- This Adds The DataFrame -->
     {% include hospital-tables/global_data.html %}
     <!-- DataFrame Ends Here -->
@@ -43,7 +43,7 @@ layout: home
 
 <!--- US Data -->
 <ul class="us_data_title">
-    <h1>US COVID-19 Information</h1>
+    <h1 id="us_dataframe">US COVID-19 Information</h1>
 </ul>
 <section class="us_data">
     <!-- This Adds The DataFrame -->
@@ -54,7 +54,7 @@ layout: home
 <!--- NY State Data -->
 
 <ul class="ny_state_data_title">
-    <h1>New York State COVID-19 Information</h1>
+    <h1 id="ny_state_dataframe">New York State COVID-19 Information</h1>
 </ul>
 <section class="ny_state_data">
     <!-- This Adds The DataFrame -->
@@ -64,7 +64,7 @@ layout: home
 
 <!--- Hospital -->
 <section class="hospital">
-    <h1>Local COVID-19 Hospital Information</h1>
+    <h1 id="local_hospital_dataframe">Local COVID-19 Hospital Information</h1>
     <div class="row">
         <div class="hospital-column">
             <img src="images/gfh2.jpg">
