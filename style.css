@@ -360,6 +360,7 @@ tr:hover {
     width: 40%;
     margin: auto;
     padding-top: 50px;
+    padding-right: 10px;
     image-rendering: auto;
     resize: both;
     overflow: visible;
