@@ -134,6 +134,10 @@ nav .fa {
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 
