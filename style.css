@@ -360,6 +360,7 @@ tr:hover {
     resize: both;
     overflow: visible;
     border: none;
+    justify-content: space-between;
 }
 
 .layer {
