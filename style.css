@@ -415,3 +415,13 @@ tr:hover {
     margin-top: 20px;
     font-weight: 600;
 }
+
+.wrapper {
+    width: 100px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+table {
+    width: 300px;
+}
