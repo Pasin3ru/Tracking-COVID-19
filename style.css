@@ -1,4 +1,4 @@
-    * {
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -322,83 +322,93 @@ tr:hover {
 }
 
 
-/*----- Hides Date Column ------*/
+/*----- Freezes Header Column in Tables ------*/
 
-.ny_state_data .dataframe td:first-child,
-.dataframe th:first-child {
-    display: none;
-    /*----- Freezes Header Column in Tables ------*/
-    .ny_state_data th {
-        background: white;
-        backface-visibility: 0;
-        position: sticky;
-        top: 0;
-    }
-    /*----- Local Hospital  ------*/
-    .hospital {
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        justify-content: space-between;
-    }
-    .hospital-column {
-        flex-basis: 35%;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        position: relative;
-        overflow: hidden;
-    }
-    .hospital-column img {
-        width: 100%;
-        display: block;
-    }
-    .dataframe {
-        width: 40%;
-        margin: auto;
-        padding-top: 50px;
-        image-rendering: auto;
-        resize: both;
-        overflow: visible;
-        border: none;
-    }
-    .layer {
-        background: transparent;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: 0.5s;
-    }
-    .layer:hover {
-        background: #b1d7f7b3;
-    }
-    .layer h3 {
-        width: 100%;
-        font-weight: 500;
-        color: 'black';
-        font-size: 32px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        position: absolute;
-        opacity: 0;
-        transition: 0.5s;
-    }
-    .layer:hover h3 {
-        bottom: 49%;
-        opacity: 1;
-    }
-    /*----- Footer ------*/
-    .footer {
-        width: 100%;
-        text-align: center;
-        padding: 30px 0;
-    }
-    .footer h4 {
-        margin-bottom: 5px;
-        margin-top: 20px;
-        font-weight: 600;
-    }
+.ny_state_data th {
+    background: white;
+    backface-visibility: 0;
+    position: sticky;
+    top: 0;
+}
+
+
+/*----- Local Hospital  ------*/
+
+.hospital {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.hospital-column {
+    flex-basis: 35%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hospital-column img {
+    width: 100%;
+    display: block;
+}
+
+.dataframe {
+    width: 40%;
+    margin: auto;
+    padding-top: 50px;
+    image-rendering: auto;
+    resize: both;
+    overflow: visible;
+    border: none;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: #b1d7f7b3;
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: 'black';
+    font-size: 32px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----- Footer ------*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+}
