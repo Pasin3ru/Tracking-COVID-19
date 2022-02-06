@@ -3,7 +3,7 @@ layout: page
 permalink: /learn-more.html
 ---
 
-<section class="about_page">
+<section class="info_page">
 <h3>Overview</h3>
 <p>
 Coronaviruses are a family of viruses that can cause illnesses such as the
