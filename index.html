@@ -31,35 +31,39 @@ layout: home
 </section>
 
 <!--- Global Data -->
-<ul class="global_data_title">
-    <h1 id="global_dataframe">Global COVID-19 Information</h1>
-    
-</ul>
+<ul class="global_data_title"></ul>
 <section class="global_data">
+<table>
+    <h1 id="global_dataframe">Global COVID-19 Information</h1>
     <!-- This Adds The DataFrame -->
     {% include hospital-tables/global_data.html %}
     <!-- DataFrame Ends Here -->
+</table>
 </section>
 
 <!--- US Data -->
-<ul class="us_data_title">
-    <h1 id="us_dataframe">US COVID-19 Information</h1>
-</ul>
+<ul class="us_data_title"></ul>
 <section class="us_data">
+<table>
+    <h1 id="us_dataframe">US COVID-19 Information</h1>
+
     <!-- This Adds The DataFrame -->
     {% include hospital-tables/us_data.html %}
     <!-- DataFrame Ends Here -->
+</table>
 </section>
 
 <!--- NY State Data -->
 
-<ul class="ny_state_data_title">
-    <h1 id="ny_state_dataframe">New York State COVID-19 Information</h1>
-</ul>
+<ul class="ny_state_data_title"></ul>
 <section class="ny_state_data">
+<table>
+    <h1 id="ny_state_dataframe">New York State COVID-19 Information</h1>
+
     <!-- This Adds The DataFrame -->
     {% include hospital-tables/ny_state_data.html %}
     <!-- DataFrame Ends Here -->
+</table>
 </section>
 
 <!--- Hospital -->

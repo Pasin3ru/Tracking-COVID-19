@@ -250,7 +250,7 @@ tr:hover {
 /*----- Global Table Scrol Bar  ------*/
 
 .global_data {
-    overflow: scroll;
+    overflow-y: scroll;
     height: 350px;
     width: 100%;
     scroll-behavior: smooth;
@@ -287,10 +287,11 @@ tr:hover {
 /*----- US Table Scrol Bar  ------*/
 
 .us_data {
-    Overflow: scroll;
+    Overflow-y: scroll;
     padding: auto;
     height: 350px;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 
@@ -314,9 +315,10 @@ tr:hover {
 /*----- NY State Table Scrol Bar  ------*/
 
 .ny_state_data {
-    overflow: scroll;
+    overflow-y: scroll;
     height: 350px;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 
@@ -418,5 +420,5 @@ tr:hover {
 }
 
 table {
-    width: 300px;
+    width: 310px;
 }
