@@ -352,6 +352,10 @@ tr:hover {
     display: block;
 }
 
+.about_page {
+    padding-top: 135px;
+}
+
 .dataframe {
     width: 40%;
     margin: auto;
