@@ -11,8 +11,10 @@ layout: default
     Take Precautions Such As The Use Of A Mask OR Face Covering Accordingly</p>
   <p><a href="learn-more.html" class="hero-btn">Click To Learn More<br>About COVID-19</a></p>
 </div>
-<section class="date_time">
-{% include hospital-tables/last_update.html %}
-</section>
+
+  <p class="date_time">
+    <script> document.write(new Date().toLocaleDateString()); </script>
+  </p>
+    
 
 {{ content }}
