@@ -130,7 +130,7 @@ nav .fa {
 
 .date_time {
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -246,14 +246,6 @@ tr:hover {
 }
 
 
-/*----- Hides Date Column ------*/
-
-.global_data .dataframe td:first-child,
-.dataframe th:first-child {
-    display: none;
-}
-
-
 /*----- Global Table Scrol Bar  ------*/
 
 .global_data {
@@ -270,14 +262,6 @@ tr:hover {
     margin: auto;
     text-align: center;
     padding-top: 80px;
-}
-
-
-/*----- Hides Date Column ------*/
-
-.us_data .dataframe td:first-child,
-.dataframe th:first-child {
-    display: none;
 }
 
 .us_data {
@@ -322,14 +306,6 @@ tr:hover {
     margin: auto;
     text-align: center;
     padding-bottom: 50px;
-}
-
-
-/*----- Hides Date Column ------*/
-
-.ny_state_data .dataframe td:first-child,
-.dataframe th:first-child {
-    display: none;
 }
 
 
