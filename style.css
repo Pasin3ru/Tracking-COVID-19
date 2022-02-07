@@ -178,7 +178,7 @@ p {
 }
 
 .info-column {
-    flex-basis: 50%;
+    flex-basis: 31%;
     background: #fff;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -196,6 +196,7 @@ h3 {
 
 .info-column:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
 }
 
 @media(max-width: 700px) {
