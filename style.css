@@ -178,13 +178,14 @@ p {
 }
 
 .info-column {
-    flex-basis: 31%;
+    flex-basis: 50%;
     background: #fff;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 10px 20px;
     box-sizing: border-box;
     transition: 0.5s;
+    padding-inline-end: 10px;
 }
 
 h3 {
