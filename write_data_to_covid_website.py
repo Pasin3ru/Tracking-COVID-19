@@ -86,6 +86,14 @@ cols = list(df.columns)
 cols = [cols[-1]] + cols[:-1]
 df = df[cols]
 
+''' DO NOT MOVE THESE 5 LINES '''
+columns=['Date']
+date_data = pd.to_datetime(df['Date'].tail(1).values).strftime('%-b %-d, %Y')
+last_update = pd.DataFrame(zip(date_data, columns))
+print(f'\nLast Updated: {last_update.values[0][0]}')
+last_update.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/last_update.json")
+
+
 # print(f'There are {int(len(df.Country))-1} Countries fighting COVID-19')
 world_cases = int(df['Total Cases'][0].replace(',', ''))
 usa_cases = int(str(df.loc[df['Country'] == 'USA']['Total Cases'][1]).replace(',', ''))
