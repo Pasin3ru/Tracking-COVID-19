@@ -6,8 +6,8 @@
 '''
     This writes Global, US, New York State and New York State County
     data in both HTML and JSON format for use in my website to
-    JSON writes to /Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/
-    HTML writes to /Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/
+    JSON writes to /Users/robertpriddle/Tracking-COVID-19/_data/
+    HTML writes to /Users/robertpriddle/Tracking-COVID-19/_includes/hospital-tables/
 
 '''
 
@@ -91,7 +91,7 @@ columns=['Date']
 date_data = pd.to_datetime(df['Date'].tail(1).values).strftime('%-b %-d, %Y')
 last_update = pd.DataFrame(zip(date_data, columns))
 print(f'\nLast Updated: {last_update.values[0][0]}')
-last_update.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/last_update.json")
+last_update.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/last_update.json")
 
 world_cases = int(df['Total Cases'][0].replace(',', ''))
 usa_cases = int(str(df.loc[df['Country'] == 'USA']['Total Cases'][1]).replace(',', ''))
@@ -150,7 +150,7 @@ df.insert(9, 'Population', population_column)
 global_df = df
 
 global_df.drop(columns=['Date'], axis=1, inplace=True)
-df.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/global_data.html", \
+df.to_html("/Users/robertpriddle/Tracking-COVID-19/_includes/hospital-tables/global_data.html", \
             col_space=115, justify="center", index=False)
 
 print('Global HTML Data Written To Website')
@@ -162,7 +162,7 @@ td = global_df['Total Deaths'][0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 gldf = pd.DataFrame(data,columns)
-gldf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/world_total_data.json")
+gldf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/world_total_data.json")
 
 print('Global JSON Data Written To Website')
 
@@ -225,7 +225,7 @@ df6.index=blankIndex
 us_df = df6
 
 us_df.drop(columns=['Date'], axis=1, inplace=True)
-us_df.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/us_data.html", \
+us_df.to_html("/Users/robertpriddle/Tracking-COVID-19/_includes/hospital-tables/us_data.html", \
             col_space=115, justify="center", index=False)
 
 print('US HTML Data Written To Website')
@@ -237,7 +237,7 @@ td = us_df['Total Deaths'][0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 usdf = pd.DataFrame(data,columns)
-usdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/us_total_data.json")
+usdf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/us_total_data.json")
 
 print('US JSON Data Written To Website')
 
@@ -311,7 +311,7 @@ data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 wcdf = pd.DataFrame(data,columns)
 wcdf2  = wcdf.replace(np.nan, 0)
-wcdf2.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/warren_county_data.json")
+wcdf2.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/warren_county_data.json")
 
 print('Warren County JSON Data Written To Website')
 
@@ -323,7 +323,7 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 scdf = pd.DataFrame(data,columns)
-scdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/saratoga_county_data.json")
+scdf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/saratoga_county_data.json")
 
 print('Saratoga County JSON Data Written To Website')
 
@@ -335,7 +335,7 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 fcdf = pd.DataFrame(data,columns)
-fcdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/franklin_county_data.json")
+fcdf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/franklin_county_data.json")
 
 print('Franklin County JSON Data Written To Website')
 
@@ -347,14 +347,14 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 wgcdf = pd.DataFrame(data,columns)
-wgcdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/washington_county_data.json")
+wgcdf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/washington_county_data.json")
 
 print('Washington County JSON Data Written To Website')
 
 nys_df = ny_df
 nys_df.drop(columns=['Date'], axis=1, inplace=True)
 nys_df.reset_index(inplace=True)
-nys_df.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/ny_state_data.html", \
+nys_df.to_html("/Users/robertpriddle/Tracking-COVID-19/_includes/hospital-tables/ny_state_data.html", \
             col_space=120, justify="center", index=False)
 
 print('NY State HTML Data Written To Website')
@@ -366,6 +366,6 @@ td = ny_df['Total Deaths'][0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 nydf = pd.DataFrame(data,columns)
-nydf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/ny_total_data.json")
+nydf.to_json("/Users/robertpriddle/Tracking-COVID-19/_data/ny_total_data.json")
 
 print('NY State JSON Data Written To Website')
