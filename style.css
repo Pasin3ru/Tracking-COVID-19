@@ -185,7 +185,7 @@ p {
     padding: 10px 20px;
     box-sizing: border-box;
     transition: 0.5s;
-    padding-inline-end: 10px;
+    padding-inline-end: 5px;
 }
 
 h3 {
