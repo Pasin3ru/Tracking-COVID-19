@@ -93,18 +93,10 @@ last_update = pd.DataFrame(zip(date_data, columns))
 print(f'\nLast Updated: {last_update.values[0][0]}')
 last_update.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/last_update.json")
 
-
-# print(f'There are {int(len(df.Country))-1} Countries fighting COVID-19')
 world_cases = int(df['Total Cases'][0].replace(',', ''))
 usa_cases = int(str(df.loc[df['Country'] == 'USA']['Total Cases'][1]).replace(',', ''))
 percent_cases = round(usa_cases / world_cases * 100,1)
-# print(f'The United States has {percent_cases}% of all COVID-19 cases in the World')
 
-'''
-    The following code was added on Jan 12, 2022 because I wanted to see some percentages
-    based on each country's population and each country's fatality rate. The numbers are 
-    probably off due to under reporting but it's the general idea I was looking for.
-'''
 # This adds the world total population to DataFrame
 country_population = list(df['Population'].str.strip()) 
 total_population = []
