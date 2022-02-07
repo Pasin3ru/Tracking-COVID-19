@@ -13,21 +13,23 @@ layout: home
         </div>
         <div class="info-column">
             <h3>United States</h3>
-            <div>Cases: 78,017,402<br>Deaths: 926,029</div>
+            <div>Cases: {{ site.data.us_total_data["0"]["Total Cases: "] }}</div>
+            <div>Deaths: {{ site.data.us_total_data["0"]["Total Deaths: "] }}</div>
         </div>
         <div class="info-column">
             <h3>New York State</h3>
             <div>Cases: {{ site.data.ny_total_data["0"]["Total Cases: "] }}</div>
             <div>Deaths: {{ site.data.ny_total_data["0"]["Total Deaths: "] }}</div>
-            <!--<div>Cases: 4,994,926<br>Deaths: 66,157</div>-->
         </div>
         <div class="info-column">
             <h3>Warren County </h3>       
-            <div>Cases: 14,699<br>Deaths: 117</div>
+            <div>Cases: {{ site.data.warren_county_data["0"]["Total Cases: "] }}</div>
+            <div>Deaths: {{ site.data.warren_county_data["0"]["Total Deaths: "] }}</div>
         </div>
         <div class="info-column">
             <h3>Saratoga County </h3>
-            <div>Cases: 43,901<br>Deaths: 310</div>
+            <div>Cases: {{ site.data.saratoga_county_data["0"]["Total Cases: "] }}</div>
+            <div>Deaths: {{ site.data.saratoga_county_data["0"]["Total Deaths: "] }}</div>
         </div>
     </div>
 </section>
