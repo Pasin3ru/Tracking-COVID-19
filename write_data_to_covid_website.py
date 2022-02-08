@@ -223,6 +223,19 @@ blankIndex=[''] * len(df6) # <---- Hide row number
 df6.index=blankIndex
 
 us_df = df6
+add_zero = us_df['New Cases'].head(1)[0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    us_df['New Cases'].head(1)[0] = add_zero
+else:
+    add_zero = add_zero
+    
+add_zero = us_df['New Deaths'][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    us_df['New Deaths'][0] = add_zero
+else:
+    add_zero = add_zero
 
 us_df.drop(columns=['Date'], axis=1, inplace=True)
 us_df.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/us_data.html", \
@@ -310,6 +323,19 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 wcdf = pd.DataFrame(data,columns)
+add_zero = wcdf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    wcdf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
+   
+add_zero = wcdf[3:4].values[0][0]
+if add_zero == ' ':
+    add_zero = '0'
+    wcdf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 wcdf2  = wcdf.replace(np.nan, 0)
 wcdf2.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/warren_county_data.json")
 
@@ -323,6 +349,19 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 scdf = pd.DataFrame(data,columns)
+add_zero = scdf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    scdf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
+   
+add_zero = scdf[3:4].values[0][0]
+if add_zero == ' ':
+    add_zero = '0'
+    scdf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 scdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/saratoga_county_data.json")
 
 print('Saratoga County JSON Data Written To Website')
@@ -335,6 +374,19 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 fcdf = pd.DataFrame(data,columns)
+add_zero = fcdf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    fcdf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero
+    
+add_zero = fcdf[3:4].values[0][0]
+if add_zero == ' ':
+    add_zero = '0'
+    fcdf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 fcdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/franklin_county_data.json")
 
 print('Franklin County JSON Data Written To Website')
@@ -347,6 +399,19 @@ td = x['Total Deaths'].values[0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 wgcdf = pd.DataFrame(data,columns)
+add_zero = wgcdf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    wgcdf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero
+    
+add_zero = wgcdf[3:4].values[0][0]
+if add_zero == ' ':
+    add_zero = '0'
+    wgcdf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 wgcdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/washington_county_data.json")
 
 print('Washington County JSON Data Written To Website')
@@ -366,6 +431,19 @@ td = ny_df['Total Deaths'][0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 nydf = pd.DataFrame(data,columns)
+add_zero = nydf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero
+    
+add_zero = nydf[3:4].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 nydf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/ny_total_data.json")
 
 print('NY State JSON Data Written To Website')
