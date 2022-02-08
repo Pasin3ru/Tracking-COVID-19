@@ -15,12 +15,29 @@
 
             for (let i=0: i<loadedData.lenth; i++) {
                 let date =  loadedData[i].Date;
+                labels.push(date);
+
                 let new_patients =  loadedData[i].Patients Admitted;
+                data.push(new_patients);
 
             }
+              // basic line chart settings
+            let options = {
+                type: 'line',
+                data: {
+                labels: labels,  // the labels we loaded!
+                datasets: [{
+                    data: data,    // the data we loaded!
+                    fill: false,
+                    pointRadius: 0,
+                    pointHoverRadius: 0,
+                    borderColor: 'rgb(100,100,100)'
+                }]
+            }
+        };
+        let chart = new Chart(document.getElementById('canvas'), options);
 
-
-         });
+    });
       </script>
    </body>
 </html>
