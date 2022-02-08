@@ -433,9 +433,9 @@ table {
     /* Remove borders */
     outline: none;
     /* Remove outline */
-    background-color: darkblue;
+    background-color: white;
     /* Set a background color */
-    color: white;
+    color: darkblue;
     /* Text color */
     cursor: pointer;
     /* Add a mouse pointer on hover */
@@ -448,7 +448,8 @@ table {
 }
 
 #myBtn:hover {
-    background-color: darkgreen;
+    background-color: darkblue;
+    color: white;
     /* Add a dark-grey background on hover */
 }
 
