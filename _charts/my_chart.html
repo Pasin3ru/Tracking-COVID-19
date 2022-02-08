@@ -1,81 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>My Chart.js Chart</title>
-</head>
-<body>  
-    <div class="container">
-        <canvas id="myChart"></canvas>
-    </div>
+<html lang = "en">
+   <head>
+      <script src = "https://d3js.org/d3.v4.min.js"></script>
+   </head>
 
-    <script>
-        let myChart = document.getElementById('myChart').getContext('2d');
-        // Global Options
-        Chart.defaults.global.defaultFontFamily = 'Poppins';
-        Chart.defaults.global.defaultFontSize = 18;
-        Chart.defaults.global.defaultFontColor = 'black';
+   <body>
+      <script>
+         // write your d3 code here.. 
+         let filename = '/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_charts/_data/gf_hospital.csv'
+         d3.csv(filename).then(function(loadedData){
 
-        let massPopChart = new Chart(myChart,{
-            type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-            data:{
-                labels:[],
-                datasets:[{
-                    label:'Population',
-                    data:[
-                    {"Date":{
-                        "93":"2022-02-06T00:00:00.000",
-                        "261":"2022-02-05T00:00:00.000",
-                        "483":"2022-02-04T00:00:00.000",
-                        "671":"2022-02-03T00:00:00.000",
-                        "874":"2022-02-02T00:00:00.000"},
-                    "Patients Currently":{"93":30,"261":30,"483":32,"671":34,"874":39},
-                    "Patients Admitted":{"93":5,"261":4,"483":4,"671":2,"874":5},
-                    "Patients In ICU":{"93":5,"261":4,"483":4,"671":4,"874":6},
-                    "Patients Expired":{"93":0,"261":0,"483":0,"671":2,"874":1}}
-                    ],
-                    //backgroundColor:'blue',// Can be an array of colors
-                    backgroundColor:'red',
-                    borderWidth:1,
-                    borderColor:'red',
-                    hoverBorderWidth:4,
-                }]
+            let data = [];
+            let labels = [];
 
-            },
-            options:{
-                title:{
-                    display:true,
-                    text:'Largest Cities In Massachusetts',
-                    fontSize:25,
-                },
-                legend:{
-                    display:true,// Change to true to display
-                    position:'right',
-                    labels:{
-                        fontColor:'black',
-                    }
-                },
-                layout:{
-                    padding:{
-                        top:50,
-                        left:0,
-                        right:0,
-                        bottom:0
-                    }
-                },
-                tooltips:{
-                    enabled:true,// set to true to show tooltips
-                    backgroundColor:'darkblue',
-                    fontColor:'black',
-                }
+            for (let i=0: i<loadedData.lenth; i++) {
+                let date =  loadedData[i].Date;
+                let new_patients =  loadedData[i].Patients Admitted;
+
             }
-        })
 
-    </script>
-    
-</body>
+
+         });
+      </script>
+   </body>
 </html>
