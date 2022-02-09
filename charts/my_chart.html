@@ -15,9 +15,9 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Date", "New Patients", { role: "style" } ],
-        {% for row in site.data.chart_gf_hospital %},
-        {% assign date = row["Date"] %},
-        {% assign admitted = row["Admitted"] %},
+        {% for row in site.data.chart_gf_hospital %}
+        {% assign date = row["Date"] %}
+        {% assign admitted = row["Admitted"] %}
         ["{{ date }}", {{ admitted }}, "color: blue"],
         {% endfor %}
 
