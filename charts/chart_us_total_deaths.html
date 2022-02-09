@@ -38,12 +38,16 @@
 
           var options = {
 
-            title: "US Total Deaths",
+            title: "US Daily Deaths",
             width: 1400,
             height: 500,
             bar: {groupWidth: "90%"},
             legend: { position: "none" }, 
             tooltip: {isHtml: false},
+            vAxis: {
+                title: 'New Deaths',
+                viewWindowMode: 'explicit',
+            }
           };
                   
 

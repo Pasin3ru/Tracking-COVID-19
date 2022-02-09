@@ -38,14 +38,20 @@
 
           var options = {
 
-            title: "US Total Cases",
+            title: "US Daily Cases",
             width: 1400,
-            height: 500,
+            height: 550,
             bar: {groupWidth: "90%"},
             legend: { position: "none" }, 
             tooltip: {isHtml: false},
-            hAxis: { format: 'M/d/yy'},
+            vAxis: {
+              title: 'New Cases',
+              scale: 1,
+              viewWindowMode: 'explicit',
+            },
+            hAxis: {
             gridlines: {count: 15}
+          },
 
           };
                   
