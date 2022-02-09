@@ -416,11 +416,29 @@ wgcdf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_data/wash
 
 print('Washington County JSON Data Written To Website')
 
-nys_df = ny_df
-nys_df.drop(columns=['Date'], axis=1, inplace=True)
-nys_df.reset_index(inplace=True)
-nys_df.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital-tables/ny_state_data.html", \
-            col_space=120, justify="center", index=False)
+nc = ny_df['New Cases'][0]
+nd = ny_df['New Deaths'][0]
+tc = ny_df['Total Cases'][0]
+td = ny_df['Total Deaths'][0]
+data = tc, td, nc, nd
+columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
+nydf = pd.DataFrame(data,columns)
+
+add_zero = nydf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero
+    
+add_zero = nydf[3:4].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
+
+
 
 print('NY State HTML Data Written To Website')
 
