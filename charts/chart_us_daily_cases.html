@@ -15,14 +15,14 @@
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
           var data = google.visualization.arrayToDataTable([
-            ["Date", "New Cases", { role: "style" } ],
+          ["Date", "New Cases", { role: "style" } ],
 
-            // Data goes here
-            {% for row in site.data.chart_us_total_cases %}
-            {% assign date = row["Date"] %}
-            {% assign total = row["New Cases"] %}
-            ["{{ date }}", {{ total }}, "color: darkblue"],
-            {% endfor %}
+          // Data goes here
+          {% for row in site.data.chart_us_total_cases %}
+          {% assign date = row["Date"] %}
+          {% assign total = row["New Cases"] %}
+          ["{{ date }}", {{ total }}, "color: darkblue"],
+          {% endfor %}
 
             
           ]);

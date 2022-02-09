@@ -7,63 +7,119 @@ permalink: /learn-more.html
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.css"></link>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style2.css"></link>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
-        google.charts.load("current", {packages:['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
+  
+        // Load Charts and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+  
+        // Draw the pie chart for Sarah's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawTotalCasesChart);
+  
+        // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawTotalDeaths);
+  
+        // Callback that draws the bar chart.
+        function drawTotalCasesChart() {
+  
+        // Create the data table.
+        // var data = new google.visualization.DataTable();
+        var data = google.visualization.arrayToDataTable([
+        ["Date", "New Cases", { role: "style" } ],
+        // Data goes here
+        {% for row in site.data.chart_us_total_cases %}
+        {% assign date = row["Date"] %}
+        {% assign total = row["New Cases"] %}
+        ["{{ date }}", {{ total }}, "color: darkblue"],
+        {% endfor %}
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                        { calc: "stringify",
+                          sourceColumn: 1,
+                          type: "string",
+                          role: "annotation" },
+                        2]);
+        
+        // Set options for Glens Falls Hospital chart.
+        var options = {
+          title:'US Daily Cases',
+          width:1300,
+          height:350,
+          bar: {groupWidth: "85%"},
+          legend: { position: "none"},
+          tooltip: {isHtml: false},
+          vAxis: {
+                  title: 'New Cases',
+                  viewWindowMode: 'explicit',
+              }
+          };
+              
+        // Instantiate and draw the chart for Glens Falls Hospital.
+        var chart = new google.visualization.ColumnChart(document.getElementById('us_cases'));
+        chart.draw(data, options);
+        }
+  
+        // Callback that draws the bar chart for Saratoga Hospital.
+        function drawTotalDeaths() {
           var data = google.visualization.arrayToDataTable([
-            ["Date", "New Cases", { role: "style" } ],
-
+            ["Date", "New Deaths", { role: "style" } ],
+  
             // Data goes here
-            {% for row in site.data.chart_us_total_cases %}
+            {% for row in site.data.chart_us_total_deaths %}
             {% assign date = row["Date"] %}
-            {% assign total = row["New Cases"] %}
-            ["{{ date }}", {{ total }}, "color: darkblue"],
+            {% assign deaths = row["New Deaths"] %}
+            ["{{ date }}", {{ deaths }}, "color: red"],
             {% endfor %}
-
-            
-          ]);
-          
-
-          var view = new google.visualization.DataView(data);
+  
+              
+        ]);
+  
+        var view = new google.visualization.DataView(data);
           view.setColumns([0, 1,
                           { calc: "stringify",
-                            sourceColumn: 2,
-                            type: "string",
-                            role: "style" },
+                          sourceColumn:2,
+                          type: "string",
+                          role: "style" },
                           2]);
-
-          var options = {
-
-            title: "US Total Cases",
-            width: 1400,
-            height: 500,
-            bar: {groupWidth: "90%"},
-            legend: { position: "none" }, 
-            tooltip: {isHtml: false},
-            hAxis: { format: 'M/d/yy'},
-            gridlines: {count: 15}
-
+  
+          var options = {            
+          title: "US Daily Deaths",
+          width: 1300,
+          height: 350,
+          bar: {groupWidth: "85%"},
+          legend: { position: "none" }, 
+          tooltip: {isHtml: false},
+          vAxis: {
+              title: 'New Deaths',
+              viewWindowMode: 'explicit',
+          }
           };
-                  
-          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-          chart.draw(view, options);
-      }
+        var chart = new google.visualization.ColumnChart(document.getElementById("us_deaths"));
+        chart.draw(view, options);
+        }
       </script>
-    </script>
-</head>
-<body>
-<div id="columnchart_values" class="barChart" ></div>
-</body>
-</html>
+    </head>
+    <body>
+      <!--Table and divs that hold the pie charts-->
+      <table class="columns">
+        <tr>
+          <td><div id="us_cases" class="barChart"></div></td>
+        </tr>
+        <tr> 
+          <td><div id="us_deaths" class="barChart" ></div></td>
+        </tr>
+      </table>
+    </body>
+  </html>
 
 
 

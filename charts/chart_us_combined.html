@@ -14,13 +14,13 @@
       google.charts.load('current', {'packages':['corechart']});
 
       // Draw the pie chart for Sarah's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawGlensFallsChart);
+      google.charts.setOnLoadCallback(drawTotalCasesChart);
 
       // Draw the pie chart for the Anthony's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawSaratogaChart);
+      google.charts.setOnLoadCallback(drawTotalDeaths);
 
       // Callback that draws the bar chart.
-      function drawGlensFallsChart() {
+      function drawTotalCasesChart() {
 
       // Create the data table.
       // var data = new google.visualization.DataTable();
@@ -44,51 +44,59 @@
       
       // Set options for Glens Falls Hospital chart.
       var options = {
-        title:'Glens Falls Hospital New Patients Admitted',
-        width:500,
-        height:300,
-        bar: {groupWidth: "95%"},
+        title:'US Daily Cases',
+        width:1300,
+        height:350,
+        bar: {groupWidth: "85%"},
         legend: { position: "none"},
         tooltip: {isHtml: false},
+        vAxis: {
+                title: 'New Cases',
+                viewWindowMode: 'explicit',
+            }
         };
             
       // Instantiate and draw the chart for Glens Falls Hospital.
-      var chart = new google.visualization.ColumnChart(document.getElementById('glens_falls_hospital'));
+      var chart = new google.visualization.ColumnChart(document.getElementById('us_cases'));
       chart.draw(data, options);
       }
 
       // Callback that draws the bar chart for Saratoga Hospital.
-      function drawSaratogaChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Date", "New Patients", { role: "style" } ],
+      function drawTotalDeaths() {
+        var data = google.visualization.arrayToDataTable([
+          ["Date", "New Deaths", { role: "style" } ],
 
-        // Data goes here
-        {% for row in site.data.chart_saratoga_hospital %}
-        {% assign date = row["Date"] %}
-        {% assign admitted = row["Admitted"] %}
-        ["{{ date }}", {{ admitted }}, "color: red"],
-        {% endfor %}
+          // Data goes here
+          {% for row in site.data.chart_us_total_deaths %}
+          {% assign date = row["Date"] %}
+          {% assign deaths = row["New Deaths"] %}
+          ["{{ date }}", {{ deaths }}, "color: red"],
+          {% endfor %}
 
             
       ]);
 
       var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                      { calc: "stringify",
-                        sourceColumn: 1,
+        view.setColumns([0, 1,
+                        { calc: "stringify",
+                        sourceColumn:2,
                         type: "string",
-                        role: "annotation" },
-                      2]);
+                        role: "style" },
+                        2]);
 
-      var options = {
-        title: "Saratoga Hospital New Patients Admitted",
-        width: 500,
-        height: 300,
-        bar: {groupWidth: "95%"},
-        legend: { position: "none" },
-        tooltip: {isHtml: true},
-      };
-      var chart = new google.visualization.BarChart(document.getElementById("sratoga_hospital"));
+        var options = {            
+        title: "US Daily Deaths",
+        width: 1300,
+        height: 350,
+        bar: {groupWidth: "85%"},
+        legend: { position: "none" }, 
+        tooltip: {isHtml: false},
+        vAxis: {
+            title: 'New Deaths',
+            viewWindowMode: 'explicit',
+        }
+        };
+      var chart = new google.visualization.ColumnChart(document.getElementById("us_deaths"));
       chart.draw(view, options);
       }
     </script>
@@ -97,10 +105,10 @@
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <tr>
-        <td><div id="glens_falls_hospital" class="barChart"></div></td>
+        <td><div id="us_cases" class="barChart"></div></td>
       </tr>
       <tr> 
-        <td><div id="sratoga_hospital" class="barChart" ></div></td>
+        <td><div id="us_deaths" class="barChart" ></div></td>
       </tr>
     </table>
   </body>

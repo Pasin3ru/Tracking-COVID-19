@@ -14,15 +14,15 @@
         google.charts.load("current", {packages:['corechart']});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ["Date", "New Deaths", { role: "style" } ],
+        var data = google.visualization.arrayToDataTable([
+          ["Date", "New Deaths", { role: "style" } ],
 
-            // Data goes here
-            {% for row in site.data.chart_us_total_deaths %}
-            {% assign date = row["Date"] %}
-            {% assign deaths = row["New Deaths"] %}
-            ["{{ date }}", {{ deaths }}, "color: red"],
-            {% endfor %}
+          // Data goes here
+          {% for row in site.data.chart_us_total_deaths %}
+          {% assign date = row["Date"] %}
+          {% assign deaths = row["New Deaths"] %}
+          ["{{ date }}", {{ deaths }}, "color: red"],
+          {% endfor %}
 
             
           ]);
