@@ -4,7 +4,9 @@
 }
 
 .chart {
-    margin: 200px auto;
+    margin: 50px auto;
     width: 1000px;
     height: 500px;
+    text-align: center;
+    padding-right: 100px;
 }
