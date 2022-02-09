@@ -431,19 +431,19 @@ td = ny_df['Total Deaths'][0]
 data = tc, td, nc, nd
 columns = ['Total Cases: ', 'Total Deaths: ', 'New Cases: ', 'New Deaths: ' ]
 nydf = pd.DataFrame(data,columns)
-# add_zero = nydf[2:3].values[0][0]
-# if len(add_zero) == 0:
-#     add_zero = '0'
-#     nydf[2:3].values[0][0] = add_zero
-# else:
-#     add_zero = add_zero
+add_zero = nydf[2:3].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[2:3].values[0][0] = add_zero
+else:
+    add_zero = add_zero
     
-# add_zero = nydf[3:4].values[0][0]
-# if len(add_zero) == 0:
-#     add_zero = '0'
-#     nydf[3:4].values[0][0] = add_zero
-# else:
-#     add_zero = add_zero 
+add_zero = nydf[3:4].values[0][0]
+if len(add_zero) == 0:
+    add_zero = '0'
+    nydf[3:4].values[0][0] = add_zero
+else:
+    add_zero = add_zero 
 nydf.to_json("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/ny_total_data.json")
 
 print('NY State JSON Data Written To Website')
