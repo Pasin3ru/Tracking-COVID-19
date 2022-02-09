@@ -44,7 +44,7 @@
       
       // Set options for Glens Falls Hospital chart.
       var options = {
-        title:'US Daily Cases',
+        title:'US Daily COVID-19Cases',
         width:1250,
         height:350,
         bar: {groupWidth: "85%"},
@@ -85,7 +85,7 @@
                         2]);
 
         var options = {            
-        title: "US Daily Deaths",
+        title: "US Daily COVID-19 Deaths",
         width: 1250,
         height: 350,
         bar: {groupWidth: "85%"},
@@ -104,12 +104,13 @@
   <body>
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
-      <tr>
+        
+    <tr>
         <td><div id="us_cases" class="barChart"></div></td>
-      </tr>
-      <tr> 
+    </tr>
+    <tr> 
         <td><div id="us_deaths" class="barChart" ></div></td>
-      </tr>
-    </table>
-  </body>
+    </tr>
+</table>
+</body>
 </html>
