@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +15,11 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Date", "New Patients", { role: "style" } ],
-        ["Feb 7",3, "color: darkblue"],
-        ["Feb 6",5, "color: darkblue"],
-        ["Feb 5",4, "color: darkblue"],
-        ["Feb 4",4, "color: darkblue"],
-        ["Feb 3",2, "color: darkblue"],
-        ["Feb 2",5, "color: darkblue"],
+        {% for row in site.data.chart_gf_hospital %},
+        {% assign date = row["Date"] %},
+        {% assign admitted = row["Admitted"] %},
+        ["{{ date }}", {{ admitted }}, "color: blue"],
+        {% endfor %}
 
         
       ]);
