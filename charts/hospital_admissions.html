@@ -14,52 +14,52 @@
       google.charts.load('current', {'packages':['corechart']});
 
       // Draw the pie chart for Sarah's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawSaratogaChart);
+      google.charts.setOnLoadCallback(drawGlensFallsChart);
 
       // Draw the pie chart for the Anthony's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawGlensFallsChart);
+      google.charts.setOnLoadCallback(drawSaratogaChart);
 
       // Callback that draws the pie chart for Sarah's pizza.
       function drawGlensFallsChart() {
 
-        // Create the data table for Sarah's pizza.
-        var data = new google.visualization.DataTable();
-        var data = google.visualization.arrayToDataTable([
-            ["Date", "New Patients", { role: "style" } ],
-            // Data goes here
-            {% for row in site.data.chart_gf_hospital %}
-            {% assign date = row["Date"] %}
-            {% assign admitted = row["Admitted"] %}
-            ["{{ date }}", {{ admitted }}, "color: blue"],
-            {% endfor %}
-        ]);
-
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-                        { calc: "stringify",
-                          sourceColumn: 1,
-                          type: "string",
-                          role: "annotation" },
-                        2]);
-        
-        // Set options for Glens Falls Hospital chart.
-        var options = {
-          title:'Glens Falls Hospital New Patients Admitted',
-          width:500,
-          height:400,
-          bar: {groupWidth: "95%"},
-          legend: { position: "none"},
-          };
-              
-        // Instantiate and draw the chart for Glens Falls Hospital.
-        var chart = new google.visualization.ColumnChart(document.getElementById('glens_falls_hospital'));
-        chart.draw(data, options);
-        }
-
-        // Callback that draws the bar chart for Saratoga Hospital.
-        function drawSaratogaChart() {
-        var data = google.visualization.arrayToDataTable([
+      // Create the data table for Sarah's pizza.
+      var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
           ["Date", "New Patients", { role: "style" } ],
+          // Data goes here
+          {% for row in site.data.chart_gf_hospital %}
+          {% assign date = row["Date"] %}
+          {% assign admitted = row["Admitted"] %}
+          ["{{ date }}", {{ admitted }}, "color: blue"],
+          {% endfor %}
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                      { calc: "stringify",
+                        sourceColumn: 1,
+                        type: "string",
+                        role: "annotation" },
+                      2]);
+      
+      // Set options for Glens Falls Hospital chart.
+      var options = {
+        title:'Glens Falls Hospital New Patients Admitted',
+        width:500,
+        height:400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none"},
+        };
+            
+      // Instantiate and draw the chart for Glens Falls Hospital.
+      var chart = new google.visualization.ColumnChart(document.getElementById('glens_falls_hospital'));
+      chart.draw(data, options);
+      }
+
+      // Callback that draws the bar chart for Saratoga Hospital.
+      function drawSaratogaChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Date", "New Patients", { role: "style" } ],
 
         // Data goes here
         {% for row in site.data.chart_saratoga_hospital %}
