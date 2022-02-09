@@ -49,54 +49,10 @@
 
           };
                   
-
           var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
           chart.draw(view, options);
       }
       </script>
-
-      <script type="text/javascript">
-        google.charts.load("current", {packages:['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ["Date", "New Deaths", { role: "style" } ],
-
-            // Data goes here
-            {% for row in site.data.chart_us_total_deaths %}
-            {% assign date = row["Date"] %}
-            {% assign deaths = row["New Deaths"] %}
-            ["{{ date }}", {{ deaths }}, "color: red"],
-            {% endfor %}
-
-            
-          ]);
-          
-
-          var view = new google.visualization.DataView(data);
-          view.setColumns([0, 1,
-                          { calc: "stringify",
-                            sourceColumn:2,
-                            type: "string",
-                            role: "style" },
-                          2]);
-
-          var options = {
-
-            title: "US Total Deaths",
-            width: 1400,
-            height: 500,
-            bar: {groupWidth: "90%"},
-            legend: { position: "none" }, 
-            tooltip: {isHtml: false},
-          };
-                  
-
-          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-          chart.draw(view, options);
-      }
-      </script>
-
     </script>
 </head>
 <body>
