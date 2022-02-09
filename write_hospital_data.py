@@ -45,6 +45,8 @@ hosp2.rename(columns={'as_of_date': 'Date',
                     'patients_newly_admitted': 'Patients Admitted',
                     'patients_currently_in_icu':'Patients In ICU',
                     'patients_expired':'Patients Expired'}, inplace=True)
+
+hosp2 = hosp.sort_values(by='Date', ascending=False)
 hosp2.to_html("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/_includes/hospital\
 -tables/s_hospital.html", col_space=75, justify="center", index=False)
 
