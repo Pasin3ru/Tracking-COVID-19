@@ -30,7 +30,7 @@
           {% for row in site.data.chart_gf_hospital %}
           {% assign date = row["Date"] %}
           {% assign admitted = row["Admitted"] %}
-          ["{{ date }}", {{ admitted }}, "color: blue"],
+          ["{{ date }}", {{ admitted }}, "color: darkblue"],
           {% endfor %}
       ]);
 
@@ -46,13 +46,14 @@
       var options = {
         title:'Glens Falls Hospital New Patients Admitted',
         width:500,
-        height:400,
+        height:300,
         bar: {groupWidth: "95%"},
         legend: { position: "none"},
+        tooltip: {isHtml: false},
         };
             
       // Instantiate and draw the chart for Glens Falls Hospital.
-      var chart = new google.visualization.ColumnChart(document.getElementById('glens_falls_hospital'));
+      var chart = new google.visualization.BarChart(document.getElementById('glens_falls_hospital'));
       chart.draw(data, options);
       }
 
@@ -80,15 +81,14 @@
                       2]);
 
       var options = {
-
         title: "Saratoga Hospital New Patients Admitted",
         width: 500,
-        height: 400,
+        height: 300,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
-        
+        tooltip: {isHtml: true},
       };
-      var chart = new google.visualization.ColumnChart(document.getElementById("sratoga_hospital"));
+      var chart = new google.visualization.BarChart(document.getElementById("sratoga_hospital"));
       chart.draw(view, options);
       }
     </script>
@@ -97,7 +97,9 @@
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <tr>
-        <td><div id="glens_falls_hospital" class="barChart2"></div></td>
+        <td><div id="glens_falls_hospital" class="barChart"></div></td>
+      </tr>
+      <tr> 
         <td><div id="sratoga_hospital" class="barChart" ></div></td>
       </tr>
     </table>
