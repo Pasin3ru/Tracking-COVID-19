@@ -9,7 +9,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("/Users/rkp/Jupyter-Notebook/Web-Page/Tracking-COVID-19/coronavirus.jpg");
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -37,7 +37,9 @@
 
 .my_title {
     text-align: center;
-    padding-top: 50px;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 20px;
 }
 
 . {
@@ -68,11 +70,17 @@ nav {
 nav img {
     width: 150px;
 }
+
+nav .fa {
+    display: none;
+}
 .nav-links {
     flex: 1;
     text-align: right;
+    font-size: 22px;
     padding-bottom: 0px;
     padding-right: 20px;
+    justify-content: space-between;
 }
 
 .nav-links ul li {
@@ -92,10 +100,10 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: darkblue;
+    background: red;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.9s;
 }
 
 .nav-links ul li:hover::after {
