@@ -178,6 +178,10 @@ h1 {
     font-weight: 600;
 }
 
+.update_time{
+    padding-top: 50px;
+    padding-bottom: 0;
+}
 p {
     color: black;
     font-size: 16px;
