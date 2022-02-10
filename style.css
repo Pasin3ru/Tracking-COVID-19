@@ -428,6 +428,11 @@ tr:hover {
     font-weight: 600;
 }
 
+.icons {
+    color: darkblue;
+    font-size: larger;
+}
+
 table {
     width: 310px;
 }

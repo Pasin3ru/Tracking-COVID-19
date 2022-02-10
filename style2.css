@@ -50,6 +50,15 @@
     padding-bottom: 0;
 }
 
+.my_title_date {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.my_graph {
+    padding-top: -10px;
+    padding-bottom: 0;
+}
 /*----- Footer ------*/
 
 .footer {
@@ -65,7 +74,8 @@
 }
 
 .icons {
-    color: black;
+    color: darkblue;
+    font-size: larger;
 }
 nav {
     display: flex;

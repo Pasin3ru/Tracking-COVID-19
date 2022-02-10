@@ -34,7 +34,7 @@ permalink: /learn-more.html
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" id="my_graph">
       // Load Charts and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
 
@@ -206,8 +206,8 @@ chart.draw(data, options);
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <div> 
-        <h1 class="my_title">US COVID-19 Data for 2022<br></h1>
-        <ul class="my_title">Updated: {{ site.data.last_update["0"]["0"]}} </ul>
+        <h1 class="my_title">US COVID-19 Data for 2022</h1>
+        <ul class="my_title_date">Updated: {{ site.data.last_update["0"]["0"]}} </ul>
       </div>
       <tr>
         <td><div id="us_cases" class="barChart"></div></td>
