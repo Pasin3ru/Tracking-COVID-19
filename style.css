@@ -188,6 +188,8 @@ p {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+
+
 }
 
 .info-column {
@@ -199,6 +201,12 @@ p {
     box-sizing: border-box;
     transition: 0.5s;
     padding-inline-end: 0px;
+}
+
+.info-column :hover {
+    background-color: #141fbb;
+    font-weight: 600;
+    color: white;
 }
 
 h3 {
