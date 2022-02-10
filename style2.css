@@ -17,6 +17,12 @@
     position: relative;
 }
 
+.header_title {
+    text-align: top left;
+    margin: 5;
+    padding-top: 0px;
+}
+
 .chart {
     margin: 50px auto;
     width: 1000px;
@@ -40,8 +46,8 @@
 .my_title {
     text-align: center;
     margin: 0;
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-top: 0px;
+    padding-right: 20px;
 }
 
 /*----- Footer ------*/
