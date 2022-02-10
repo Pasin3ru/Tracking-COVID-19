@@ -71,13 +71,27 @@ permalink: /learn-more.html
         title:'US Daily Cases',
         width:1275,
         height: 325,
+        explorer : {
+						actions : ["dragToZoom", "rightClickToReset"],
+						maxZoomIn : 0.05
+					},
         bar: {groupWidth: "85%"},
         legend: { position: "none"},
         tooltip: {isHtml: false},
         vAxis: {
                 title: 'New Cases',
+                gridlines: {count: 8},
+                viewWindowMode: 'explicit',          },
+          hAxis: {
+                gridlines: {count: 8},
                 viewWindowMode: 'explicit',
-            }
+                textPosition : "out",
+						    iewWindow : {
+                  max : 10
+                },
+						    showEveryText : 10,
+                slantedText : true
+          },
         };
             
       // Instantiate and draw the chart US Daily Cases.
@@ -113,13 +127,13 @@ permalink: /learn-more.html
         width: 1275,
         height: 325,
         bar: {groupWidth: "85%"},
-        legend: { position: "none" }, 
+      legend: { position: "none" }, 
         tooltip: {isHtml: false},
         vAxis: {
             title: 'New Deaths',
             viewWindowMode: 'explicit',
-        }
-        };
+        },
+      };
       var chart = new google.visualization.ColumnChart(document.getElementById("us_deaths"));
       chart.draw(view, options);
       }
@@ -130,7 +144,7 @@ permalink: /learn-more.html
     <table class="columns">
       <div> 
         <h1 class="my_title">US COVID-19 Data for 2022<br></h1>
-        <ul class="my_title">Updated: {{ site.data.last_update["0"]["0"]}}</ul>
+        <ul class="my_title">Updated: {{ site.data.last_update["0"]["0"]}} </ul>
       </div>
       <tr>
         <td><div id="us_cases" class="barChart"></div></td>
