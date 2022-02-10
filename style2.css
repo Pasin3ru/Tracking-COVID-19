@@ -4,11 +4,12 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 18;
 }
 }
 
 .header {
-    min-height: 100vh;
+    min-height: 800vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
     background-position: center;
@@ -41,10 +42,6 @@
     margin: 0;
     padding-top: 10px;
     padding-left: 20px;
-}
-
-. {
-    padding-bottom: 50pxpx;
 }
 
 /*----- Footer ------*/
