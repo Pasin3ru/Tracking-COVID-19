@@ -1,8 +1,8 @@
 ---
-<!--layout: page-->
+<!-- layout: page -->
 permalink: /learn-more.html
 ---
-
+<!-- 2/9/2022 -->
 <section class="info_page"></section>
 
 <!DOCTYPE html>
@@ -15,71 +15,71 @@ permalink: /learn-more.html
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
-      // Load Charts and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
+    // Load Charts and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
 
-      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+    // Draw the pie chart for Sarah's pizza when Charts is loaded.
       google.charts.setOnLoadCallback(drawTotalCasesChart);
 
-      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
-      google.charts.setOnLoadCallback(drawTotalDeaths);
+    // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawTotalDeaths);
 
-      // Callback that draws the bar chart.
-      function drawTotalCasesChart() {
+    // Callback that draws the bar chart.
+     function drawTotalCasesChart() {
 
-      // Create the data table.
-      // var data = new google.visualization.DataTable();
-      var data = google.visualization.arrayToDataTable([
-      ["Date", "New Cases", { role: "style" } ],
-      // Data goes here
-      {% for row in site.data.chart_us_total_cases %}
-      {% assign date = row["Date"] %}
-      {% assign total = row["New Cases"] %}
-      ["{{ date }}", {{ total }}, "color: darkblue"],
-      {% endfor %}
-      ]);
+    // Create the data table.
+    // var data = new google.visualization.DataTable();
+    var data = google.visualization.arrayToDataTable([
+    ["Date", "New Cases", { role: "style" } ],
+    // Data goes here
+    {% for row in site.data.chart_us_total_cases %}
+    {% assign date = row["Date"] %}
+    {% assign total = row["New Cases"] %}
+    ["{{ date }}", {{ total }}, "color: darkblue"],
+    {% endfor %}
+    ]);
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                      { calc: "stringify",
-                        sourceColumn: 1,
-                        type: "string",
-                        role: "annotation" },
-                      2]);
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+                    { calc: "stringify",
+                      sourceColumn: 1,
+                      type: "string",
+                      role: "annotation" },
+                    2]);
       
-      // Set options for Glens Falls Hospital chart.
-      var options = {
-        title:'US Daily Cases',
-        width:1275,
-        height:350,
-        bar: {groupWidth: "85%"},
-        legend: { position: "none"},
-        tooltip: {isHtml: false},
-        vAxis: {
-                title: 'New Cases',
-                viewWindowMode: 'explicit',
-            }
-        };
+    // Set options for US Daily Deaths chart here <---------.
+    var options = {
+          title:'US Daily Cases',
+          width:1275,
+          height:350,
+          bar: {groupWidth: "85%"},
+          legend: { position: "none"},
+          tooltip: {isHtml: false},
+          vAxis: {
+            title: 'New Cases',
+            viewWindowMode: 'explicit',
+        }
+    };
             
-      // Instantiate and draw the chart for Glens Falls Hospital.
-      var chart = new google.visualization.ColumnChart(document.getElementById('us_cases'));
-      chart.draw(data, options);
-      }
+    // Instantiate and draw the chart for US Daily Deaths.
+    var chart = new google.visualization.ColumnChart(document.getElementById('us_cases'));
+    chart.draw(data, options);
+    }
 
-      // Callback that draws the bar chart for Saratoga Hospital.
-      function drawTotalDeaths() {
-        var data = google.visualization.arrayToDataTable([
-          ["Date", "New Deaths", { role: "style" } ],
+    // Callback that draws the bar chart for US Daily Deaths.
+    function drawTotalDeaths() {
+    var data = google.visualization.arrayToDataTable([
+        ["Date", "New Deaths", { role: "style" } ],
 
-          // Data goes here
-          {% for row in site.data.chart_us_total_deaths %}
-          {% assign date = row["Date"] %}
-          {% assign deaths = row["New Deaths"] %}
-          ["{{ date }}", {{ deaths }}, "color: red"],
-          {% endfor %}
+        // Data goes here
+        {% for row in site.data.chart_us_total_deaths %}
+        {% assign date = row["Date"] %}
+        {% assign deaths = row["New Deaths"] %}
+        ["{{ date }}", {{ deaths }}, "color: red"],
+        {% endfor %}
 
-            
-      ]);
+              
+        ]);
 
       var view = new google.visualization.DataView(data);
         view.setColumns([0, 1,
@@ -89,7 +89,8 @@ permalink: /learn-more.html
                         role: "style" },
                         2]);
 
-        var options = {            
+      // Set options for US Daily Deaths chart here <---------.
+      var options = {            
         title: "US Daily Deaths",
         width: 1275,
         height: 350,
@@ -100,27 +101,30 @@ permalink: /learn-more.html
             title: 'New Deaths',
             viewWindowMode: 'explicit',
         }
-        };
-      var chart = new google.visualization.ColumnChart(document.getElementById("us_deaths"));
-      chart.draw(view, options);
-      }
-    </script>
-  </head>
-  <body>
-    <!--Table and divs that hold the pie charts-->
-    <table class="columns">
+      };
+
+    // Instantiate and draw the chart for US Daily Deaths.
+    var chart = new google.visualization.ColumnChart(document.getElementById("us_deaths"));
+    chart.draw(view, options);
+    }
+  </script>
+</head>
+
+<body>
+<!--Table and divs that hold the column charts-->
+<table class="columns">
       <div> 
         <h1 class="my_title">US COVID-19 Information for 2022</h1>
-      </div>
-      <tr>
-        <td><div id="us_cases" class="barChart"></div></td>
-      </tr>
-      <tr> 
-        <td><div id="us_deaths" class="barChart2" ></div></td>
-      </tr>
+        </div>
+            <tr>
+              <td><div id="us_cases" class="barChart"></div></td>
+            </tr>
+          <tr> 
+            <td><div id="us_deaths" class="barChart2" ></div></td>
+         </tr>
     </table>
-  </body>
-  
+</body>
+
 </html>
 
 
