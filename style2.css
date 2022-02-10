@@ -66,7 +66,7 @@
 
 nav {
     display: flex;
-    padding: 2% 1%;
+    padding: 5% 1%;
     justify-content: space-between;
     align-items: center;
 }
@@ -82,7 +82,8 @@ nav .fa {
     flex: 1;
     text-align: left;
     font-size: 24px;
-    padding-top: 0;
+    padding-top: 1000;
+    padding-bottom: 5px;
     padding-right: 20px;
     color: white;
 }
@@ -149,10 +150,10 @@ nav .fa {
 }
 
 
-/*--- About Us Page ---*/
+/*--- Graph Page ---*/
 
 .sub-header {
-    height: 14vh;
+    height: 18vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
     background-position: center;
