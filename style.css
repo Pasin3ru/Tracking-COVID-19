@@ -30,6 +30,7 @@ nav img {
     flex: 1;
     text-align: right;
     padding-bottom: 170px;
+    padding-top: 0;
 }
 
 .nav-links ul li {
@@ -42,7 +43,7 @@ nav img {
 .nav-links ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .nav-links ul li::after {
