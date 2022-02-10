@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 }
 
@@ -38,7 +39,7 @@
 .my_title {
     text-align: center;
     margin: 0;
-    padding-top: 0px;
+    padding-top: 10px;
     padding-left: 20px;
 }
 
@@ -62,7 +63,7 @@
 
 nav {
     display: flex;
-    padding: 2% 6%;
+    padding: 2% 1%;
     justify-content: space-between;
     align-items: center;
 }
@@ -77,21 +78,21 @@ nav .fa {
 .nav-links {
     flex: 1;
     text-align: right;
-    font-size: 22px;
-    padding-bottom: 0px;
+    font-size: 24px;
+    padding-top: 0;
     padding-right: 20px;
-    justify-content: space-between;
+    color: white;
 }
 
 .nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 4px 12px;
     position: relative;
 }
 
 .nav-links ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 13px;
 }
@@ -100,7 +101,7 @@ nav .fa {
     content: '';
     width: 0%;
     height: 2px;
-    background: red;
+    background: white;
     display: block;
     margin: auto;
     transition: 0.9s;
@@ -108,4 +109,55 @@ nav .fa {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 10px;
+    /* Place the button at the bottom of the page */
+    right: 10px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: white;
+    /* Set a background color */
+    color: darkblue;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 20px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 26px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: darkblue;
+    color: white;
+    /* Add a dark-grey background on hover */
+}
+
+
+/*--- About Us Page ---*/
+
+.sub-header {
+    height: 14vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header h1 {
+    margin-top: 100px;
 }
