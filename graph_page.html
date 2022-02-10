@@ -71,7 +71,7 @@ permalink: /learn-more.html
       var options = {
         title:'US Daily Cases',
         width:1275,
-        height:270,
+        height:290,
         bar: {groupWidth: "85%"},
         legend: { position: "none"},
         tooltip: {isHtml: false},
@@ -112,7 +112,7 @@ permalink: /learn-more.html
         var options = {            
         title: "US Daily Deaths",
         width: 1275,
-        height: 270,
+        height: 290,
         bar: {groupWidth: "85%"},
         legend: { position: "none" }, 
         tooltip: {isHtml: false},
@@ -159,7 +159,32 @@ permalink: /learn-more.html
           navLinks.style.right = "-200px";
       }
   </script>
+ 
   </body>
+  <ul>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+      if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+  </ul>
   
 </html>
 
