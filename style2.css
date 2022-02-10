@@ -1,3 +1,5 @@
+/*--------------------------  This Is For Graph Page ------------------------*/
+
 * {
     padding: 0;
     margin: 0;
@@ -16,15 +18,18 @@
     margin: 0;
     text-align: center;
 }
+
 .barChart2 {
     padding: 0;
     margin: 0;
     text-align: center;
 }
-.my_title{
+
+.my_title {
     text-align: center;
     padding-top: 50px;
 }
+
 . {
     padding-bottom: 50pxpx;
 }
