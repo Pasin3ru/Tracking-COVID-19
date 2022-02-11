@@ -38,18 +38,17 @@ permalink: /learn-more.html
       // Load Charts and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
 
-      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      // Draw the pie chart for US Total Cases
       google.charts.setOnLoadCallback(drawTotalCasesChart);
 
-      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      // Draw the pie chart for the US Total Deaths
       google.charts.setOnLoadCallback(drawTotalDeaths);
 
-      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      // Draw the pie chart for tGlobal Cases
       google.charts.setOnLoadCallback(drawGlobalCases);
 
       // Callback that draws the bar chart for US Daily Cases.
       function drawTotalCasesChart() {
-
       // Create the data table.
       // var data = new google.visualization.DataTable();
       var data = google.visualization.arrayToDataTable([
@@ -114,11 +113,9 @@ permalink: /learn-more.html
           {% assign deaths = row["New Deaths"] %}
           ["{{ date }}", {{ deaths }}, "color: red"],
           {% endfor %}
+        ]);
 
-            
-      ]);
-
-      var view = new google.visualization.DataView(data);
+        var view = new google.visualization.DataView(data);
         view.setColumns([0, 1,
                         { calc: "stringify",
                         sourceColumn:2,
@@ -131,7 +128,7 @@ permalink: /learn-more.html
         width: 1275,
         height: 350, //<--------------- Adjust Height Here
         bar: {groupWidth: "90%"},
-      legend: { position: "none" }, 
+        legend: { position: "none" }, 
         tooltip: {isHtml: false},
         explorer : {
 						actions : ["dragToZoom", "rightClickToReset"],
@@ -147,31 +144,30 @@ permalink: /learn-more.html
       }
 
       function drawGlobalCases() {
+                // Create the data table.
+                // var data = new google.visualization.DataTable();
+                var data = google.visualization.arrayToDataTable([
+                    ["Date", "New Cases", { role: "style" } ],
+                    // Data goes here
+                    {% for row in site.data.chart_global_total_data %}
+                    {% assign date = row["Date"] %}
+                    {% assign total = row["New Cases"] %}
+                    ["{{ date }}", {{ total }}, "color: darkblue"],
+                    {% endfor %}
+                    ]);
 
-// Create the data table.
-// var data = new google.visualization.DataTable();
-var data = google.visualization.arrayToDataTable([
-["Date", "New Cases", { role: "style" } ],
-// Data goes here
-{% for row in site.data.chart_global_total_data %}
-{% assign date = row["Date"] %}
-{% assign total = row["New Cases"] %}
-["{{ date }}", {{ total }}, "color: darkblue"],
-{% endfor %}
-]);
-
-var view = new google.visualization.DataView(data);
-view.setColumns([0, 1,
-                { calc: "stringify",
-                  sourceColumn: 1,
-                  type: "string",
-                  role: "annotation" },
-                2]);
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0, 1,
+                                { calc: "stringify",
+                                  sourceColumn: 1,
+                                  type: "string",
+                                  role: "annotation" },
+                                2]);
 
 // Set options for Global Daily Cases chart.
 var options = {
   title:'Global Daily Cases',
-  width:1275,
+  width: 1275,
   height: 350, //<--------------- Adjust Height Here
   explorer : {
       actions : ["dragToZoom", "rightClickToReset"],
@@ -183,23 +179,75 @@ var options = {
   vAxis: {
           title: 'New Cases',
           gridlines: {count: 8},
-          viewWindowMode: 'explicit',          },
-    hAxis: {
-          gridlines: {count: 8},
-          viewWindowMode: 'explicit',
-          textPosition : "out",
-          iewWindow : {
-            max : 10
-          },
-          showEveryText : 10,
-          slantedText : true
+          viewWindowMode: 'explicit',   
+        },
+  hAxis: {
+        gridlines: {count: 8},
+        viewWindowMode: 'explicit',
+        textPosition : "out",
+        iewWindow : {
+          max : 10
+        },
+        showEveryText : 10,
+        slantedText : true
     },
   };
       
-// Instantiate and draw the chart US Daily Cases.
-var chart = new google.visualization.BolumnChart(document.getElementById('global_cases'));
-chart.draw(data, options);
+
 }
+// Instantiate and draw the chart US Daily Cases.
+var chart = new google.visualization.ColumnChart(document.getElementById('global_cases'));
+chart.draw(data, options);
+function drawGlobalCases() {
+      // Create the data table.
+      // var data = new google.visualization.DataTable();
+      var data = google.visualization.arrayToDataTable([
+      ["Date", "New Cases", { role: "style" } ],
+      // Data goes here
+      {% for row in site.data.chart_global_total_data %}
+      {% assign date = row["Date"] %}
+      {% assign total = row["New Cases"] %}
+      ["{{ date }}", {{ total }}, "color: yellow"],
+      {% endfor %}
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                      { calc: "stringify",
+                        sourceColumn: 1,
+                        type: "string",
+                        role: "annotation" },
+                      2]);
+      
+      // Set options for US Daily Cases chart.
+      var options = {
+        title:'Global Daily Cases',
+        width: 1275,
+        height: 400, //<--------------- Adjust Height Here
+        explorer : {
+						actions : ["dragToZoom", "rightClickToReset"],
+						maxZoomIn : 0.05
+					},
+        bar: {groupWidth: "90%"},
+        legend: { position: "none"},
+        tooltip: {isHtml: false},
+        vAxis: {
+                title: 'New Cases',
+                gridlines: {count: 8},
+                viewWindowMode: 'explicit',          },
+          hAxis: {
+                gridlines: {count: 8},
+                viewWindowMode: 'explicit',
+                textPosition : "out",
+						    iewWindow : {
+                  max : 10
+                },
+						    showEveryText : 10,
+                slantedText : true
+          },
+        };
+            
+      }
     </script>
   </head>
   <body>
@@ -214,6 +262,9 @@ chart.draw(data, options);
       </tr>
       <tr> 
         <td><div id="us_deaths" class="barChart2" ></div></td>
+      </tr>
+      <tr> 
+        <td><div id="global_cases" class="barChart3" ></div></td>
       </tr>
       <tr> 
        <!---- <td><div id="global_cases" class="barChart2" ></div></td> --->
