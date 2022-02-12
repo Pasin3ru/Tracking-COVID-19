@@ -53,20 +53,6 @@
     padding-bottom: 0;
 }
 
-/*----- Footer ------*/
-
-.footer {
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.footer h4 {
-    margin-bottom: 5px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
 .icons {
     color: black;
 }
@@ -110,7 +96,7 @@ nav .fa {
 .nav-links ul li::after {
     content: '';
     width: 0%;
-    height: 2px;
+    height: 4px;
     background: white;
     display: block;
     margin: auto;
@@ -172,6 +158,19 @@ nav .fa {
     margin-top: 500px;
 }
 
+/*----- Footer ------*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+}
 
 
 
