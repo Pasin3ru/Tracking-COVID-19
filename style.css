@@ -436,6 +436,9 @@ tr:hover {
 .icons {
     color: darkblue;
     font-size: larger;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 10px 0;
 }
 
 table {
