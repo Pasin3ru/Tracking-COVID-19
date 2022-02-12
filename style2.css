@@ -9,7 +9,7 @@
 }
 
 .header {
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
     background-position: center;
@@ -17,22 +17,16 @@
     position: relative;
 }
 
-.responsive-iframe {
-    position: absolute;
-      top:0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }
-  
 .header_title {
     text-align: top left;
     margin: 5;
     padding-top: 0px;
 }
-
+.my_title_date{
+    text-align: center;
+}
 .chart {
-    margin: 10px auto;
+    margin: 50px auto;
     width: 1000px;
     height: 500px;
     text-align: center;
@@ -58,15 +52,6 @@
     padding-bottom: 0;
 }
 
-.my_title_date {
-    text-align: center;
-    padding-bottom: 0;
-}
-
-.my_graph {
-    
-    padding-top: 50;
-}
 /*----- Footer ------*/
 
 .footer {
@@ -82,14 +67,11 @@
 }
 
 .icons {
-    color: darkblue;
-    font-size: larger;
+    color: black;
 }
 nav {
     display: flex;
-    padding-top: 3%;
-    bottom: 10;
-    padding-left: 19px;
+    padding: 5% 1%;
     justify-content: space-between;
     align-items: center;
 }
@@ -104,8 +86,8 @@ nav .fa {
 .nav-links {
     flex: 1;
     text-align: left;
-    font-size: 24px;
-    padding-top: 100;
+    font-size: 22px;
+    padding-top: 1000;
     padding-bottom: 5px;
     padding-right: 20px;
     color: white;
@@ -121,8 +103,7 @@ nav .fa {
 .nav-links ul li a {
     color: white;
     text-decoration: none;
-    font-size: 13px;
-    padding-bottom: 0;
+    font-size: 15px;
 }
 
 .nav-links ul li::after {
