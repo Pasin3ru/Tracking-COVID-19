@@ -49,7 +49,7 @@ nav img {
 .nav-links ul li::after {
     content: '';
     width: 0%;
-    height: 2px;
+    height: 4px;
     background: #fff;
     display: block;
     margin: auto;
