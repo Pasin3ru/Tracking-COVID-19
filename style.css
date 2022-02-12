@@ -362,6 +362,7 @@ tr:hover {
     position: relative;
     overflow: visible;
     padding-right: 23px;
+    resize: horizontal;
 }
 
 .hospital-column img {
