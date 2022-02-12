@@ -24,6 +24,7 @@
 }
 .my_title_date{
     text-align: center;
+    font-weight: lighter;
 }
 .chart {
     margin: 50px auto;
