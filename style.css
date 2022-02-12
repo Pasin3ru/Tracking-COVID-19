@@ -348,16 +348,19 @@ tr:hover {
     width: 90%;
     margin: auto;
     text-align: center;
+    padding-top: 50px;
+    padding-right: 22px;
     padding-bottom: 50px;
+    justify-content: space-between;
 }
 
 .hospital-column {
-    flex-basis: 40%;
+    flex-basis: 35%;
     border-radius: 10px;
     margin-bottom: 30px;
     padding-right: 10px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding-right: 23px;
 }
 
