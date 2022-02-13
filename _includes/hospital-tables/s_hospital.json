@@ -1,1 +1,234 @@
-{"Date":{"164":"Feb 12","342":"Feb 11","471":"Feb 10","733":"Feb 9","829":"Feb 8"},"Patients Currently":{"164":17,"342":18,"471":18,"733":16,"829":17},"Patients Admitted":{"164":3,"342":3,"471":3,"733":2,"829":1},"Patients In ICU":{"164":3,"342":2,"471":2,"733":2,"829":3},"Patients Expired":{"164":1,"342":0,"471":0,"733":1,"829":0}}
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>as_of_date</th>
+      <th>facility_pfi</th>
+      <th>facility_name</th>
+      <th>doh_region</th>
+      <th>facility_county</th>
+      <th>facility_network</th>
+      <th>ny_forward_region</th>
+      <th>patients_currently</th>
+      <th>patients_newly_admitted</th>
+      <th>patients_positive_after</th>
+      <th>patients_discharged</th>
+      <th>patients_currently_in_icu</th>
+      <th>patients_currently_icu</th>
+      <th>patients_expired</th>
+      <th>cumulative_covid_19_discharges</th>
+      <th>cumulative_covid_19_fatalities</th>
+      <th>total_staffed_beds</th>
+      <th>total_staffed_beds_currently</th>
+      <th>total_staffed_icu_beds</th>
+      <th>total_staffed_icu_beds_2</th>
+      <th>total_staffed_acute_care</th>
+      <th>total_staffed_acute_care_1</th>
+      <th>total_staffed_icu_beds_1</th>
+      <th>total_staffed_icu_beds_3</th>
+      <th>total_new_admissions_reported</th>
+      <th>patients_age_lt1</th>
+      <th>patients_age_1_4</th>
+      <th>patients_age_5_19</th>
+      <th>patients_age_20_44</th>
+      <th>patients_age_45_54</th>
+      <th>patients_age_55_64</th>
+      <th>patients_age_65_74</th>
+      <th>patients_age_75_84</th>
+      <th>patients_age_greater_85</th>
+      <th>hospitalized_indicator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td>2022-02-12</td>
+      <td>818</td>
+      <td>SARATOGA HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>SARATOGA</td>
+      <td>ALBANY MEDICAL CENTER</td>
+      <td>CAPITAL REGION</td>
+      <td>17.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1098.0</td>
+      <td>187.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>157.0</td>
+      <td>128.0</td>
+      <td>19.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>2022-02-11</td>
+      <td>818</td>
+      <td>SARATOGA HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>SARATOGA</td>
+      <td>ALBANY MEDICAL CENTER</td>
+      <td>CAPITAL REGION</td>
+      <td>18.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1095.0</td>
+      <td>186.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>168.0</td>
+      <td>136.0</td>
+      <td>19.0</td>
+      <td>12.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>2022-02-10</td>
+      <td>818</td>
+      <td>SARATOGA HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>SARATOGA</td>
+      <td>ALBANY MEDICAL CENTER</td>
+      <td>CAPITAL REGION</td>
+      <td>18.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1092.0</td>
+      <td>186.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>175.0</td>
+      <td>140.0</td>
+      <td>19.0</td>
+      <td>12.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>2022-02-09</td>
+      <td>818</td>
+      <td>SARATOGA HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>SARATOGA</td>
+      <td>ALBANY MEDICAL CENTER</td>
+      <td>CAPITAL REGION</td>
+      <td>16.0</td>
+      <td>2</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1091.0</td>
+      <td>186.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>189.0</td>
+      <td>155.0</td>
+      <td>19.0</td>
+      <td>12.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>2022-02-08</td>
+      <td>818</td>
+      <td>SARATOGA HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>SARATOGA</td>
+      <td>ALBANY MEDICAL CENTER</td>
+      <td>CAPITAL REGION</td>
+      <td>17.0</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1089.0</td>
+      <td>185.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>175.0</td>
+      <td>150.0</td>
+      <td>19.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
