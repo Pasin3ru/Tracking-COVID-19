@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking The Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,600&display=swap" rel="stylesheet"> 
+</head>
+    <section class="header">
+        <nav>
+            <!--- Hide Logo -->
+            <!---<a href="index3.html"><img src="images/logo.png"></a>--->
+            <div class="nav-links" id="nav-links">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">GLOBAL</a></li>
+                    <li><a href="">US</a></li>
+                    <li><a href="">NY STATE</a></li>
+                    <li><a href="">LOCAL</a></li>
+                    <li><a href="">CHARTS</a></li>
+
+                </ul>
+
+            </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <div class="text_box">
+            <h1>RKP Weather Station</h1>
+            <p>
+                Another Awesome Project by RKP
+            </p> 
+            <a href="" class="hero-btn" onClick="window.open(url='https://ambientweather.net/dashboard');">Click For<br>Ambient Weather</a>
+        </div>
+        
+    </section>
+
+    <!----- Weather Bar ------->
+    <section class="weather-bar">
+        <h1>Daily High/Low Temperatures</h1>
+        <p>&#x26C5  Daily High/Low Temperature for February 16 | &#x1F321 Current Temp: 36.7°F | 2.6°C  | Moon Phase: The Moon is Full &#127765</p>  
+        <p>Sunrise: 6:51 AM | Sunset: 5:26 PM | Hrs. Daylight: 10.6</p>  
+
+        <div class="row">
+            <div class="temperature-column">
+                <h3>2019</h3>
+                <div>High: N/A</div>
+                <div> Low: N/A</div>
+                <div>Average: N/A</div>
+                <div>Conditions: N/A</div>
+          
+          </div>
+            <div class="temperature-column" id="info-column">
+                <h3>2020</h3>
+                <div>High: 34.3°F</div>
+                <div> Low: 22.1°F</div>
+                <div>Average: 28.1°F</div>
+                <div>Conditions: Cloudy</div>
+          
+            </div>
+            <div class="temperature-column">
+                <h3>2021</h3> 
+                <div>High: 35.4°F</div>
+                <div> Low: 22.6°F</div>
+                <div>Average: 29.2°F</div>
+                <div>Conditions: Cloudy</div>
+          
+            </div>
+            <div class="temperature-column">
+                <h3>2022</h3> 
+                <div>High: 40.5°F</div>
+                <div> Low: 6.4°F</div>
+                <div>Average: 24.2°F</div>
+                <div>Conditions: Cloudy</div>
+          
+            </div>
+          </div>
+
+    </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>   
+
+    <!-----  Monthly Weather DataFrames ------->
+
+<section class="monthly-weather">
+    <h1 class="monthly-weather-title">Monthly High/Low Temperatures</h1>
+    <ul>
+    <h1 class="global_data_title">2022</h1>
+    </ul>
+    <section class="table-wrapper">
+        <div>
+            <table>
+                <!-- This Adds The DataFrame -->
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High:</th>
+      <td>42.1°F</td>
+      <td>49.6°F</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Low:</th>
+      <td>-10.1°F</td>
+      <td>-2.6°F</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>Avg:</th>
+      <td>17.7°F</td>
+      <td>24.8°F</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+                <!-- DataFrame Ends Here -->
+            </table>
+        </div>
+    </section>
+</section>
+
+<section class="table-wrapper">
+    <h1 class="global_data_title">2021</h1>      
+    <table>
+        <!-- This Adds The DataFrame -->
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High:</th>
+      <td>39.7°F</td>
+      <td>46.0°F</td>
+      <td>72.7°F</td>
+      <td>77.2°F</td>
+      <td>92.8°F</td>
+      <td>95.5°F</td>
+      <td>90.0°F</td>
+      <td>93.2°F</td>
+      <td>84.2°F</td>
+      <td>76.8°F</td>
+      <td>62.4°F</td>
+      <td>59.5°F</td>
+    </tr>
+    <tr>
+      <th>Low:</th>
+      <td>-7.8°F</td>
+      <td>-2.2°F</td>
+      <td>5.9°F</td>
+      <td>17.4°F</td>
+      <td>33.4°F</td>
+      <td>45.1°F</td>
+      <td>47.1°F</td>
+      <td>50.4°F</td>
+      <td>39.2°F</td>
+      <td>29.8°F</td>
+      <td>13.8°F</td>
+      <td>11.5°F</td>
+    </tr>
+    <tr>
+      <th>Avg:</th>
+      <td>24.6°F</td>
+      <td>24.9°F</td>
+      <td>43.1°F</td>
+      <td>48.5°F</td>
+      <td>58.6°F</td>
+      <td>70.3°F</td>
+      <td>69.3°F</td>
+      <td>72.7°F</td>
+      <td>63.0°F</td>
+      <td>54.7°F</td>
+      <td>36.6°F</td>
+      <td>33.0°F</td>
+    </tr>
+  </tbody>
+</table>
+        <!-- DataFrame Ends Here -->
+    </table>
+</section>
+
+<section class="table-wrapper">
+    <div class="table-wrapper"></div>
+    <h1 class="global_data_title">2020</h1>      
+    <table>
+        <!-- This Adds The DataFrame -->
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High:</th>
+      <td>57.2°F</td>
+      <td>55.2°F</td>
+      <td>67.8°F</td>
+      <td>65.8°F</td>
+      <td>92.5°F</td>
+      <td>95.0°F</td>
+      <td>94.3°F</td>
+      <td>91.8°F</td>
+      <td>87.4°F</td>
+      <td>76.1°F</td>
+      <td>71.1°F</td>
+      <td>58.1°F</td>
+    </tr>
+    <tr>
+      <th>Low:</th>
+      <td>-3.1°F</td>
+      <td>-4.0°F</td>
+      <td>9.0°F</td>
+      <td>21.9°F</td>
+      <td>27.3°F</td>
+      <td>38.5°F</td>
+      <td>59.0°F</td>
+      <td>47.5°F</td>
+      <td>32.2°F</td>
+      <td>20.7°F</td>
+      <td>16.5°F</td>
+      <td>1.6°F</td>
+    </tr>
+    <tr>
+      <th>Avg:</th>
+      <td>27.9°F</td>
+      <td>27.2°F</td>
+      <td>38.6°F</td>
+      <td>44.8°F</td>
+      <td>58.5°F</td>
+      <td>68.9°F</td>
+      <td>75.3°F</td>
+      <td>70.4°F</td>
+      <td>61.3°F</td>
+      <td>50.0°F</td>
+      <td>41.3°F</td>
+      <td>30.2°F</td>
+    </tr>
+  </tbody>
+</table>
+        <!-- DataFrame Ends Here -->
+    </table>
+    </div>  
+    <ul>
+        <h1 class="global_data_title" >2019</h1>
+        </ul>
+        <section class="table">
+            <div>
+                <table>
+                    <!-- This Adds The DataFrame -->
+                    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High:</th>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>86.4°F</td>
+      <td>90.7°F</td>
+      <td>93.4°F</td>
+      <td>86.7°F</td>
+      <td>86.2°F</td>
+      <td>71.2°F</td>
+      <td>68.2°F</td>
+      <td>46.8°F</td>
+    </tr>
+    <tr>
+      <th>Low:</th>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>36.7°F</td>
+      <td>42.4°F</td>
+      <td>53.2°F</td>
+      <td>46.6°F</td>
+      <td>36.9°F</td>
+      <td>29.8°F</td>
+      <td>5.7°F</td>
+      <td>-1.7°F</td>
+    </tr>
+    <tr>
+      <th>Avg:</th>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>57.1°F</td>
+      <td>66.7°F</td>
+      <td>74.3°F</td>
+      <td>69.1°F</td>
+      <td>61.3°F</td>
+      <td>50.9°F</td>
+      <td>33.3°F</td>
+      <td>27.4°F</td>
+    </tr>
+  </tbody>
+</table>
+                    <!-- DataFrame Ends Here -->
+                </table>
+            </div>
+        </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------ JavaScript for Toggle Menu ------->
+<script>
+    var navLinks = document.getElementById("nav-links");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+<section>
+
+    
+</section>
+<div>
+<!--- Footer -->
+<section class="footer">
+<h4>About Us</h4>
+<ul>RKP Weather Station</ul>
+
+<ul>rkp.software 2/13/2022</ul>
+<div class="icons">
+<i class="fa fa-twitter" id="twitter"></i>
+<i class="fa fa-github-square" id="github"></i>
+<i class="fa fa-facebook" id="facebook"></i>
+</div>
+</section>
+<body>
+    
+</body>
+
+</html>
