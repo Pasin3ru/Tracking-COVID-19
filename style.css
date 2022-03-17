@@ -202,7 +202,7 @@ p {
 .info-column {
     flex-basis: 31%;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 5%;
     padding: 10px 20px;
     box-sizing: border-box;
