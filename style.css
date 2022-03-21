@@ -204,10 +204,10 @@ p {
     background: #fff;
     border-radius: 10px;
     margin-bottom: 5%;
-    padding: 10px 20px;
+    padding: 5px 5px;
     box-sizing: border-box;
     transition: 0.5s;
-    padding-inline-end: 0px;
+   
 }
 
 .info-column :hover {
