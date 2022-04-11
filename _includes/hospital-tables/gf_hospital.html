@@ -1,61 +1,278 @@
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: center;">
-      <th style="min-width: 62px;">Date</th>
-      <th style="min-width: 62px;">Patients Currently</th>
-      <th style="min-width: 62px;">Patients Admitted</th>
-      <th style="min-width: 62px;">Patients In ICU</th>
+      <th style="min-width: 62px;">As of Date</th>
+      <th style="min-width: 62px;">Facility PFI</th>
+      <th style="min-width: 62px;">Facility Name</th>
+      <th style="min-width: 62px;">DOH Region</th>
+      <th style="min-width: 62px;">Facility County</th>
+      <th style="min-width: 62px;">Facility Network</th>
+      <th style="min-width: 62px;">NY Forward Region</th>
+      <th style="min-width: 62px;">Patients Currently Hospitalized</th>
+      <th style="min-width: 62px;">Patients Admitted Due to COVID</th>
+      <th style="min-width: 62px;">Patients Admitted Not Due to COVID</th>
+      <th style="min-width: 62px;">Patients Newly Admitted</th>
+      <th style="min-width: 62px;">Patients Positive After Admission</th>
+      <th style="min-width: 62px;">Patients Discharged</th>
+      <th style="min-width: 62px;">Patients Currently in ICU</th>
+      <th style="min-width: 62px;">Patients Currently ICU Intubated</th>
       <th style="min-width: 62px;">Patients Expired</th>
+      <th style="min-width: 62px;">Cumulative COVID-19 Discharges to Date</th>
+      <th style="min-width: 62px;">Cumulative COVID-19 Fatalities to Date</th>
+      <th style="min-width: 62px;">Total Staffed Beds</th>
+      <th style="min-width: 62px;">Total Staffed Beds Currently Available</th>
+      <th style="min-width: 62px;">Total Staffed ICU Beds</th>
+      <th style="min-width: 62px;">Total Staffed ICU Beds Currently Available</th>
+      <th style="min-width: 62px;">Total Staffed Acute Care Beds</th>
+      <th style="min-width: 62px;">Total Staffed Acute Care Beds Occupied</th>
+      <th style="min-width: 62px;">Total Staffed ICU Beds 1</th>
+      <th style="min-width: 62px;">Total Staffed ICU Beds Currently Occupied</th>
+      <th style="min-width: 62px;">Total New Admissions Reported</th>
+      <th style="min-width: 62px;">Patients Age Less Than 1 Year</th>
+      <th style="min-width: 62px;">Patients Age 1 To 4 Years</th>
+      <th style="min-width: 62px;">Patients Age 5 to 19 Years</th>
+      <th style="min-width: 62px;">Patients Age 20 to 44 Years</th>
+      <th style="min-width: 62px;">Patients Age 45 to 54 Years</th>
+      <th style="min-width: 62px;">Patients Age 55 to 64 Years</th>
+      <th style="min-width: 62px;">Patients Age 65 to 74 Years</th>
+      <th style="min-width: 62px;">Patients Age 75 to 84 Years</th>
+      <th style="min-width: 62px;">Patients Age Greater Than 85 Years</th>
+      <th style="min-width: 62px;">Hospitalized Indicator</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Apr 9</td>
-      <td>8</td>
+      <td>2022-04-05</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Apr 8</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>Apr 7</td>
-      <td>9</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Apr 6</td>
-      <td>8</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Apr 5</td>
-      <td>8</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>Apr 4</td>
-      <td>9</td>
-      <td>0</td>
-      <td>0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1026</td>
+      <td>149</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>134.0</td>
+      <td>17.0</td>
+      <td>17.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>5.0</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>Apr 10</td>
-      <td>5</td>
-      <td>0</td>
+      <td>2022-04-06</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
       <td>1</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1027</td>
+      <td>149</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>134.0</td>
+      <td>17.0</td>
+      <td>17.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2022-04-07</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>9.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1027</td>
+      <td>149</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>133.0</td>
+      <td>16.0</td>
+      <td>16.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2022-04-08</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1027</td>
+      <td>150</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>137.0</td>
+      <td>17.0</td>
+      <td>17.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2022-04-09</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1027</td>
+      <td>150</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>130.0</td>
+      <td>17.0</td>
+      <td>17.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2022-04-10</td>
+      <td>1005</td>
+      <td>GLENS FALLS HOSPITAL</td>
+      <td>CAPITAL DISTRICT REGIONAL OFFICE</td>
+      <td>WARREN</td>
+      <td>INDEPENDENT</td>
+      <td>CAPITAL REGION</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1031</td>
+      <td>150</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>180.0</td>
+      <td>134.0</td>
+      <td>14.0</td>
+      <td>14.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
       <td>0</td>
     </tr>
   </tbody>
