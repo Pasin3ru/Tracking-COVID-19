@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/*---  This adds the image to the Home Page ---*/
 .header {
     min-height: 100vh;
     width: 100%;
@@ -15,6 +16,7 @@
     position: relative;
 }
 
+/*---  This adds the nav-bar to the Home Page ---*/
 nav {
     display: flex;
     padding: 2% 6%;
@@ -46,6 +48,7 @@ nav img {
     font-size: 18px;
 }
 
+/*---  This underlines the links in the nav-bar ---*/
 .nav-links ul li::after {
     content: '';
     width: 0%;
