@@ -4,13 +4,13 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 14;
+    font-size: 16;
 }
 }
 
 .header {
     min-height: 60vh;
-    width: 100%;
+    width: auto;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/COVID-19.jpeg");
     background-position: center;
     background-size: cover;
